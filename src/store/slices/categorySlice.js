@@ -24,7 +24,7 @@ const initialState = {
     },
     {
     "category_id": 103,
-    "category_name": "Pret",
+    "category_name": "Mens",
     "category_description": " ",
     "category_image_url": " ",
     "category_status": true,

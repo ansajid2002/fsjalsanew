@@ -7,11 +7,12 @@ import indianflag from  "../assets/india-flag.png"
 import fslogoblack from "../assets/fslogo-black.png"
 import { Input } from 'antd';
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
     const {categoriesList} = useSelector((store) => store.categories)
-    console.log(categoriesList);
+    // console.log(categoriesList);
 
   return (
     <div className=' '>
@@ -36,7 +37,7 @@ const Header = () => {
             </div>
         </div>
         <div className='flex items-center justify-between my-1 px-10 '>
-            <img src={fslogoblack} alt="main-logo" className='h-[50px]'/>
+            <Link to="/"><img src={fslogoblack} alt="main-logo" className='h-[50px]'/></Link>
             <div className='flex items-center space-x-10'>
             <div className='relative '>
             <Input placeholder="Search here..."  className=' w-[200px]'/>
@@ -54,10 +55,10 @@ const Header = () => {
         <div className='border-b bg-gray-100 border-gray-400 py-0.5'>
         <div className='flex items-center justify-between mx-[15%]' >
             {
-                categoriesList.slice(0,10).map((single) => {
+                categoriesList.slice(0,10).map((single,index) => {
                     return (
-                        <div className='  '>
-                        <h1 className='  text-[17px] font-medium'>{single.category_name}</h1>
+                        <div key={index} className='  '>
+                        <button className='  text-[17px] font-medium'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
                         </div>
                     )
                 })

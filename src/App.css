@@ -16,3 +16,80 @@
 .react-slideshow-container .nav:first-of-type {
   left:30px !important;
 }
+.slick-arrow .slick-next::before {
+  display:none !important;
+}
+/* ///////////////ADVERTISEMENT (HOMESCREEN) ////////////// */
+.adv-text{
+  font-size: 1.5rem;
+  }
+  .adv-btn {
+     font-size: 1.2rem;
+     background-color: black;
+     color:white;
+     padding:.7rem 1rem;
+     border-radius: 8px;
+     border:none;
+  }
+  .adv-btn:hover {
+
+        font-size: 1rem;
+        background-color: black;
+        color:white;
+        padding:.5rem .8rem;
+        border-radius: 8px;
+        border:none;
+     
+  }
+  @media screen and (max-width:992px) {
+     .adv-text{
+        font-size: 1.3rem;
+        }
+        .adv-btn {
+           font-size: 1rem;
+           background-color: black;
+           color:white;
+           padding:.8rem 1rem;
+           border-radius: 8px;
+           border:none;
+        }
+        
+  }
+  
+  @media screen and (max-width:700px) {
+     .adv-text{
+        font-size: .8rem;
+        }
+        .adv-btn {
+           font-size: .6rem;
+           background-color: black;
+           color:white;
+           padding:.5rem .5rem;
+           border-radius: 8px;
+           border:none;
+        }
+        .adv-off {
+           font-size:.6rem;
+        }
+        
+  }
+  
+  @media screen and (max-width:500px) {
+     .adv-text{
+        font-size: .6rem;
+        }
+        .adv-btn {
+           font-size: .5rem;
+           background-color: black;
+           color:white;
+           padding:.6rem .7rem;
+           border-radius: 8px;
+           border:none;
+        }
+        .adv-off {
+           margin-top: 0;
+           margin-bottom: 0.3rem;
+           font-size:.6rem;
+        }
+        
+      }

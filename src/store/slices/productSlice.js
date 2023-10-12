@@ -6,7 +6,7 @@ const initialState = {
       product_id:1,
     product_name:"Candy Pink Sharara Suit",
     description:"Pro desc",
-    discount:30,  //in percent
+    discount:40,  //in percent
     quantity:10,
     weight:250,    //in grams
     brand : " kalki",
@@ -21,6 +21,9 @@ const initialState = {
             fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
         },
     product_type:"variant",
+    currency_symbol:"INR",
+    price:1000,
+    images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
    
     product_variants:{
         color:{
@@ -41,7 +44,7 @@ const initialState = {
         product_id:1,
       product_name:"Candy Pink Sharara Suit",
       description:"Pro desc",
-      discount:30,  //in percent
+      discount:10,  //in percent
       quantity:10,
       weight:250,    //in grams
       brand : " kalki",
@@ -56,6 +59,8 @@ const initialState = {
               fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
           },
       product_type:"variant",
+      price:1000,
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
    
       product_variants:{
           color:{
@@ -76,7 +81,7 @@ const initialState = {
         product_id:1,
       product_name:"Candy Pink Sharara Suit",
       description:"Pro desc",
-      discount:30,  //in percent
+      discount:23,  //in percent
       quantity:10,
       weight:250,    //in grams
       brand : " kalki",
@@ -91,6 +96,8 @@ const initialState = {
               fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
           },
       product_type:"variant",
+      price:1000,
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
 
       product_variants:{
           color:{
@@ -126,6 +133,8 @@ const initialState = {
               fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
           },
       product_type:"variant",
+      price:1000,
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
  
       product_variants:{
           color:{
@@ -161,6 +170,8 @@ const initialState = {
               fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
           },
       product_type:"variant",
+      price:1000,
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
 
       product_variants:{
           color:{
@@ -196,6 +207,8 @@ const initialState = {
               fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
           },
       product_type:"variant",
+      price:1000,
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       
       product_variants:{
         color:{
@@ -231,7 +244,8 @@ const initialState = {
               fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
           },
       product_type:"variant",
-   
+      price:1000,
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       product_variants:{
         color:{
             red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
@@ -259,7 +273,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:4,
@@ -270,7 +285,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:5,
@@ -281,7 +297,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:6,
@@ -292,7 +309,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:7,
@@ -303,7 +321,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:8,
@@ -314,7 +333,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:9,
@@ -325,7 +345,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:10,
@@ -336,7 +357,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:11,
@@ -347,7 +369,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:12,
@@ -358,7 +381,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:13,
@@ -369,7 +393,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:14,
@@ -380,7 +405,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:105,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:15,
@@ -391,7 +417,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:106,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:16,
@@ -402,7 +429,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:17,
@@ -413,7 +441,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:108,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:18,
@@ -424,7 +453,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:108,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:19,
@@ -435,7 +465,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:107,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:20,
@@ -446,7 +477,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:21,
@@ -457,7 +489,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:22,
@@ -468,7 +501,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:23,
@@ -479,7 +513,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:105,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       },
       {
         product_id:24,
@@ -490,7 +525,8 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:106,
-      rating:4.4
+      rating:4.4,
+      brand:"Kalki"
       }
   ]
 }
