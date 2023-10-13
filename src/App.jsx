@@ -25,9 +25,7 @@ function App() {
 
         return (
     <Route key={index}  path={`/${single.category_name}`} element={<Productsscreen/>} />
-
         )
-
       })
     }
     <Route path ="/sajid"/>

@@ -9,7 +9,9 @@ const initialState = {
     discount:40,  //in percent
     quantity:10,
     weight:250,    //in grams
-    brand : " kalki",
+    brand:"Kalki",
+    rating:4.4,
+      reviews:3456,
     product_care:"Do not use Bleach, Do not tumble dry",
     shipping_fee :
     {Local:200 , Zonal:400 , International:600}
@@ -47,7 +49,9 @@ const initialState = {
       discount:10,  //in percent
       quantity:10,
       weight:250,    //in grams
-      brand : " kalki",
+      brand:"Kalki",
+      rating:4.4,
+      reviews:3456,
       product_care:"Do not use Bleach, Do not tumble dry",
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
@@ -84,7 +88,9 @@ const initialState = {
       discount:23,  //in percent
       quantity:10,
       weight:250,    //in grams
-      brand : " kalki",
+      brand:"Kalki",
+      rating:4.4,
+      reviews:3456,
       product_care:"Do not use Bleach, Do not tumble dry",
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
@@ -121,7 +127,9 @@ const initialState = {
       discount:30,  //in percent
       quantity:10,
       weight:250,    //in grams
-      brand : " kalki",
+      brand:"Kalki",
+      rating:4.4,
+      reviews:3456,
       product_care:"Do not use Bleach, Do not tumble dry",
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
@@ -158,7 +166,9 @@ const initialState = {
       discount:30,  //in percent
       quantity:10,
       weight:250,    //in grams
-      brand : " kalki",
+      brand:"Kalki",
+      rating:4.4,
+      reviews:3456,
       product_care:"Do not use Bleach, Do not tumble dry",
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
@@ -195,7 +205,9 @@ const initialState = {
       discount:30,  //in percent
       quantity:10,
       weight:250,    //in grams
-      brand : " kalki",
+      brand:"Kalki",
+      rating:4.4,
+      reviews:3456,
       product_care:"Do not use Bleach, Do not tumble dry",
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
@@ -232,7 +244,11 @@ const initialState = {
       discount:30,  //in percent
       quantity:10,
       weight:250,    //in grams
-      brand : " kalki",
+      brand:"Kalki",
+     
+      reviews:3456,
+      rating:4.4,
+      
       product_care:"Do not use Bleach, Do not tumble dry",
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
@@ -274,7 +290,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:4,
@@ -286,7 +303,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:5,
@@ -298,7 +316,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:6,
@@ -310,7 +329,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:7,
@@ -322,7 +342,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:8,
@@ -334,7 +355,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:9,
@@ -346,7 +368,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:101,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:10,
@@ -358,7 +381,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:11,
@@ -370,7 +394,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:12,
@@ -382,7 +407,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:13,
@@ -394,7 +420,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:14,
@@ -406,7 +433,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:105,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:15,
@@ -418,7 +446,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:106,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:16,
@@ -430,7 +459,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:17,
@@ -442,7 +472,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:108,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:18,
@@ -454,7 +485,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:108,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:19,
@@ -466,7 +498,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:107,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:20,
@@ -478,7 +511,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:21,
@@ -490,7 +524,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:22,
@@ -502,7 +537,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:104,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:23,
@@ -514,7 +550,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:105,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       },
       {
         product_id:24,
@@ -526,7 +563,8 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:106,
       rating:4.4,
-      brand:"Kalki"
+       brand:"Kalki",
+      reviews:3456,
       }
   ]
 }
