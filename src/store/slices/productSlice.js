@@ -31,8 +31,14 @@ const initialState = {
         color:{
             red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
             green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+            blue:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
         }
     },
+    product_tag:[
+      {fabric:["Cotton","Polyester","Crepe","Chiffon","Lace","Silk"]},
+      {Occassion:["Wedding","Casual","Reception","Cocktail"]},
+      {Look:["Designer","Traditional","Fashion","Contemporary"]}
+    ],
     category_id:101,
     subcategory_id:1001,
     vendor_id:501,
