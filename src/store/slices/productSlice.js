@@ -19,9 +19,7 @@ const initialState = {
     featured:true,
     created_at:"",
     updated_at:"",
-    product_tags:{
-            fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-        },
+   
     product_type:"variant",
     currency_symbol:"INR",
     price:1000,
@@ -29,9 +27,9 @@ const initialState = {
    
     product_variants:{
         color:{
-            red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-            blue:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+            "#000000":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
         }
     },
     product_tag:[
@@ -65,17 +63,20 @@ const initialState = {
       featured:true,
       created_at:"",
       updated_at:"",
-      product_tags:{
-              fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-          },
+      
       product_type:"variant",
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
-   
+      product_tag:[
+        {names: ["sajid","shadab","danish"]},
+        {fabric:["Cotton","Polyester","Crepe","Chiffon","Lace","Silk"]},
+        {Occassion:["Wedding","Casual","Reception","Cocktail"]},
+        {Look:["Designer","Traditional","Fashion","Contemporary"]}
+      ],
       product_variants:{
           color:{
-              red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
           }
       },
       category_id:101,
@@ -104,17 +105,15 @@ const initialState = {
       featured:true,
       created_at:"",
       updated_at:"",
-      product_tags:{
-              fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-          },
+    
       product_type:"variant",
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
 
       product_variants:{
           color:{
-              red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
           }
       },
       category_id:101,
@@ -140,20 +139,24 @@ const initialState = {
       shipping_fee :
       {Local:200 , Zonal:400 , International:600}
       ,
+      product_tag:[
+        {names: ["sajid","shadab","danish","Ahmed"]},
+        {fabric:["Cotton","Polyester","Crepe","Chiffon","Lace","Silk"]},
+        {Occassion:["Wedding","Casual","Reception","Cocktail"]},
+        {Look:["Designer","Traditional","Fashion","Contemporary"]}
+      ],
       featured:true,
       created_at:"",
       updated_at:"",
-      product_tags:{
-              fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-          },
+     
       product_type:"variant",
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
  
       product_variants:{
           color:{
-              red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
           }
       },
       category_id:101,
@@ -182,17 +185,20 @@ const initialState = {
       featured:true,
       created_at:"",
       updated_at:"",
-      product_tags:{
-              fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-          },
+      product_tag:[
+     
+        {fabric:["Cotton","Polyester","Crepe","Chiffon","Lace","Silk"]},
+        {Occassion:["Wedding","Casual","Reception","Cocktail"]},
+        {Look:["Designer","Traditional","Fashion","Contemporary"]}
+      ],
       product_type:"variant",
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
 
       product_variants:{
           color:{
-              red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
           }
       },
       category_id:101,
@@ -221,17 +227,15 @@ const initialState = {
       featured:true,
       created_at:"",
       updated_at:"",
-      product_tags:{
-              fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-          },
+     
       product_type:"variant",
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       
       product_variants:{
         color:{
-            red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
         }
       },
       category_id:101,
@@ -262,16 +266,14 @@ const initialState = {
       featured:true,
       created_at:"",
       updated_at:"",
-      product_tags:{
-              fabric:["cotton","chiffon"] , occasion:["wedding","Casual","formal"]
-          },
+     
       product_type:"variant",
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       product_variants:{
         color:{
-            red:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            green:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
         }
       },
       category_id:101,
@@ -386,6 +388,12 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
+      product_tag:[
+        {names: ["urtis","shadab","danish"]},
+        {fabric:["Cotton","Polyester"]},
+        {Occassion:["Wedding","Reception","Cocktail"]},
+        {Look:["Designer","Traditional","Fashion","Contemporary"]}
+      ],
       rating:4.4,
        brand:"Kalki",
       reviews:3456,
@@ -412,6 +420,13 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
+      product_variants:{
+        color:{
+            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
+            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+            // "#000000":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
+        }
+    },
       rating:4.4,
        brand:"Kalki",
       reviews:3456,
