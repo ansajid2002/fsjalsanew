@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BsShareFill } from 'react-icons/bs';
 import {  FaStar } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineHeart,AiFillStar, AiFillHeart} from "react-icons/ai"
 
 const Productsscreen = () => {
@@ -22,6 +22,12 @@ const Productsscreen = () => {
       return single.category_id
     }  
   })[0].category_id
+
+  const categoryName = categoriesList.filter((single) => {
+    if(single.category_name === originalName){
+      return single.category_id
+    }  
+  })[0].category_name
   
   console.log(categoryId);
 const productstoshow = productsList.filter((single) => {
@@ -80,26 +86,29 @@ const handlePageChange = (pageNumber) => {
 
       {
         productsToShow.map((single,index) => {
-          const {images,price,brand,product_name,discount,reviews,rating} = single
+          const {images,price,brand,product_name,discount,reviews,rating,category_name,product_id} = single
           return (
-            <div className=' relative flex items-center justify-center m-3' key={index}>
+            <div className=' relative flex items-center justify-center m-3 sm:m-4 lg:m-5 shadow-lg' key={index}>
               <div className=''>
+              <Link to={`/${categoryName}/${product_id}`} >
+
+              
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
                 <img  src={images[1]} alt="trendimg" className=' object-cover w-full h-full rounded-t-md' />
                 </div>
                 <div className=' bg-gray-200 p-2'>
 
-                    <h1 className='font-bold text-lg xl:text-xl'>
+                    <h1 className='font-bold text-base xl:text-lg'>
                       {brand}
                     </h1>
                     <h1 className=" text-sm  md:text-base  font-normal line-clamo-1">{product_name}</h1>
                     <div className='flex items-center  space-x-2'>
-                    <h1 className=' text-base lg:text-xl font-bold'>{`${c_symbol} ${price - price*(discount/100)}`}</h1>
-                    <h1 className=' -mt-0.5 text-base lg:text-lg text-gray-600 line-through'>{`${c_symbol} ${price}`}</h1>
+                    <h1 className=' text-base lg:text-lg font-bold'>{`${c_symbol} ${price - price*(discount/100)}`}</h1>
+                    <h1 className='  text-base lg:text-base text-gray-600 line-through'>{`${c_symbol} ${price}`}</h1>
                     <h1 className='text-[14px] lg:text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
                     </div>
-                    <div className='flex justify-between items-center mt-2'>
+                    <div className='flex justify-between items-center mt-1.5'>
                     <div className='flex space-x-4'>
                     <div className='flex items-center space-x-1 bg-[#0000ff] px-1.5 py-0 md:py-1 rounded-xl '>
                       <FaStar color='white' size={windowWidth > 992 ?  16 : 14} />
@@ -111,12 +120,13 @@ const handlePageChange = (pageNumber) => {
                     
                     </div>
                 </div>
-
+                </Link>
                 </div>
                 <div className='absolute top-0 right-0 bg-gray-200 p-1 '>
                 <AiOutlineHeart size={windowWidth > 992 ?  25 : 16} className=''/>
                 </div>
                 </div>
+                
           )
         })
       }

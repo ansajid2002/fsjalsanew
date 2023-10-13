@@ -52,13 +52,13 @@ const Header = () => {
             </div>
             </div>
         </div>
-        <div className='border-b bg-gray-100 border-gray-400 py-0.5'>
+        <div className='border-b bg-gray-50 border-gray-200 py-1'>
         <div className='flex items-center justify-between mx-[15%]' >
             {
                 categoriesList.slice(0,10).map((single,index) => {
                     return (
                         <div key={index} className='  '>
-                        <button className='  text-[17px] font-medium'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
+                        <button className='  text-[17px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
                         </div>
                     )
                 })

@@ -9,6 +9,7 @@ import Homescreen from './pages/Homescreen'
 import Footer from './components/footer/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Productsscreen from './pages/Productsscreen'
+import Productoverview from './pages/Productoverview'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,7 +29,15 @@ function App() {
         )
       })
     }
-    <Route path ="/sajid"/>
+    {
+      categoriesList.map((single,index) => {
+
+        return (
+    <Route key={index}  path={`/${single.category_name}/:id`} element={<Productoverview/>} />
+        )
+      })
+    }
+    
 
     </Routes>
     

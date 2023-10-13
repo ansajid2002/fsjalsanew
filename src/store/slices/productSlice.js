@@ -43,7 +43,7 @@ const initialState = {
     ],
     },
     {
-        product_id:1,
+        product_id:122,
       product_name:"Candy Pink Sharara Suit",
       description:"Pro desc",
       discount:10,  //in percent
@@ -82,7 +82,7 @@ const initialState = {
       ],
       },
       {
-        product_id:1,
+        product_id:123,
       product_name:"Candy Pink Sharara Suit",
       description:"Pro desc",
       discount:23,  //in percent
@@ -121,7 +121,7 @@ const initialState = {
       ],
       },
       {
-        product_id:1,
+        product_id:1245,
       product_name:"Candy Pink Sharara Suit",
       description:"Pro desc",
       discount:30,  //in percent
@@ -160,7 +160,7 @@ const initialState = {
       ],
       },
       {
-        product_id:1,
+        product_id:126,
       product_name:"Candy Pink Sharara Suit",
       description:"Pro desc",
       discount:30,  //in percent
