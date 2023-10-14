@@ -192,7 +192,7 @@ const Homescreen = () => {
               <div>
               <div className='flex items-center justify-center mx-4'>
               <div className='' >
-                {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
+              
                 <div className=' aspect-[3/4]'>
                 <img  src={images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
                 </div>

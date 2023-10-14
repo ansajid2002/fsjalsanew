@@ -23,14 +23,14 @@ const initialState = {
     product_type:"variant",
     currency_symbol:"INR",
     price:1000,
-    images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
+    images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
    
     product_variants:{
-        color:{
-            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-            "#000000":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-        }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          {name:"#000000",values:{images:["/images/productimages/men2.jpg","/images/productimages/boys1.jpg"],price:3000,size:["S","M","L"]},}
+        ]
     },
     product_tag:[
       {fabric:["Cotton","Polyester","Crepe","Chiffon","Lace","Silk"]},
@@ -74,10 +74,11 @@ const initialState = {
         {Look:["Designer","Traditional","Fashion","Contemporary"]}
       ],
       product_variants:{
-          color:{
-              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-          }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          {name:"#000000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},}
+        ]
       },
       category_id:101,
       subcategory_id:1001,
@@ -111,10 +112,11 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
 
       product_variants:{
-          color:{
-              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-          }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          {name:"#000000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},}
+        ]
       },
       category_id:101,
       subcategory_id:1001,
@@ -154,10 +156,11 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
  
       product_variants:{
-          color:{
-              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-          }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          {name:"#000000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},}
+        ]
       },
       category_id:101,
       subcategory_id:1001,
@@ -195,12 +198,7 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
 
-      product_variants:{
-          color:{
-              "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-              "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-          }
-      },
+      
       category_id:101,
       subcategory_id:1001,
       vendor_id:501,
@@ -233,10 +231,12 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       
       product_variants:{
-        color:{
-            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-        }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          {name:"#000000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},},
+          {name:"#ff0000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},}
+        ]
       },
       category_id:101,
       subcategory_id:1001,
@@ -271,10 +271,11 @@ const initialState = {
       price:1000,
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       product_variants:{
-        color:{
-            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-        }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          {name:"#000000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},}
+        ]
       },
       category_id:101,
       subcategory_id:1001,
@@ -421,11 +422,11 @@ const initialState = {
       images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
       category_id:102,
       product_variants:{
-        color:{
-            "#00008b":{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},
-            "#ff7701":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-            // "#000000":{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000},
-        }
+        color:[
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
+          
+        ]
     },
       rating:4.4,
        brand:"Kalki",

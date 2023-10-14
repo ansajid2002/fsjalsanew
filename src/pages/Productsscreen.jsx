@@ -9,6 +9,7 @@ import { Checkbox, Slider } from "antd";
 const Productsscreen = () => {
   const [productsToShow, setproductsToShow] = useState([]);
   const [producttagtoshow, setProducttagtoshow] = useState([])
+  const [colorsfilter,setColorsfilter] = useState([])
   const { c_symbol } = useSelector((store) => store.selectedCurrency);
   const location = useLocation();
   const currentURL = location.pathname;
@@ -30,7 +31,6 @@ const Productsscreen = () => {
     }
   })[0].category_name;
 
-  // console.log(categoryId);
   const productstoshow = productsList.filter((single) => {
     return single.category_id === categoryId;
   });
@@ -38,18 +38,16 @@ const Productsscreen = () => {
   const subcategoriestoshow = subcategoriesList.filter((single) => {
     return single.parent_category_id === categoryId;
   });
-  // console.log(subcategoriestoshow);
+ 
 
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
   };
-
+console.log(colorsfilter);
   ///////////////////////PRODUCTS TAG////////////////////////////////////
 
   const gettags = () => {
-    console.log("productsToShow");
-    console.log(productstoshow);
-    console.log("productsToShow");
+
     const producttagfilterarr = productstoshow.filter((product) => product.product_tag).map((single) => single.product_tag).flat()
 
 
@@ -73,22 +71,25 @@ const Productsscreen = () => {
     // Step 3: Convert the dictionary back into an array
     const mergedArray = Object.keys(mergedObject).map(key => ({ [key]: mergedObject[key] }));
     setProducttagtoshow(mergedArray)
-    // console.log("producttagfilterarr");
-    // console.log(producttagfilterarr);
-    // console.log(mergedArray);
-    // console.log("producttagfilterarr");
+
+    
   }
 
+  const getUniqueColors = () => {
+  
+    const uniqueColors = [...new Set(productstoshow.filter((product) => product.product_variants).map((single) => single.product_variants.color.map((single) => single.name)).flat())]
+    
+    
+    setColorsfilter(uniqueColors);
+
+    
+  }
+  
   useEffect(() => {
+    getUniqueColors();
     gettags()
-  }, [currentURL, categoryId])
+  }, [currentURL, categoryId]);
   
-  const uniqueColors = productstoshow
-  .filter((single) => single.product_type === "variant")
-  .map((single) => Object.keys(single.product_variants.color))
-  .flat();
-  
-  const colorsfilter = [...new Set(uniqueColors)];
   const discountfilter = [
     { name: "Upto 20% off" },
     { name: "Upto 30% off" },
@@ -101,7 +102,7 @@ const Productsscreen = () => {
     { name: "4.0 to 5.0" },
   ];
 
-  // console.log(colorsfilter);
+
   ///////////////////////PRODUCTS TAG////////////////////////////////////
 
   useEffect(() => {
@@ -152,7 +153,10 @@ const Productsscreen = () => {
           <div className="">
            
           <div>
-            <h1 className="text-xl font-medium mt-6 mb-1.5">Shop by Style</h1>
+          {
+            subcategoriestoshow.length !== 0 &&
+            <h1 className="text-base md:text-xl font-medium mt-6 mb-1.5">More Categories</h1>
+          }
             <div className="">
               {subcategoriestoshow.map((single, index) => {
                 return (
@@ -170,7 +174,7 @@ const Productsscreen = () => {
           <div>
             {producttagtoshow.map((single, index) => (
               <div key={index}>
-                <h1 className="text-xl font-medium mt-6 mb-1.5">{`Shop By ${Object.keys(single)}`}</h1>
+                <h1 className="text-base md:text-xl font-medium mt-6 mb-1.5">{`Shop By ${Object.keys(single)}`}</h1>
                 {Object.values(single).map((val, valIndex) => (
                   <div key={valIndex}>
                     {val.map((ss, ssIndex) => (
@@ -190,7 +194,7 @@ const Productsscreen = () => {
 
           {/* /////////////////Product tags///////////////////////// */}
           <div>
-            <h1 className="text-xl font-medium mt-6 mb-1.5">Shop By Discount</h1>
+            <h1 className="text-base md:text-xl font-medium mt-6 mb-1.5">Shop By Discount</h1>
             {discountfilter.map((single, index) => {
               return (
                 <div className="block">
@@ -203,30 +207,34 @@ const Productsscreen = () => {
             })}
           </div>
           <div>
-            <h1 className="text-xl font-medium mt-6 mb-1.5">Colors</h1>
+          {
+            colorsfilter.length !== 0 &&
+            <><h1 className="text-base md:text-xl font-medium mt-6 mb-1.5">Colors</h1>
             <div className="flex space-x-2">
               {colorsfilter.map((single, index) => {
-                console.log(single);
+            
                 return (
                   <h1
-                    className={`bg-[${single}] h-[20px] w-[20px] rounded-full`}
-                  ></h1>
+      key={index}
+      style={{ backgroundColor: single, width: '20px', height: '20px', borderRadius: '50%' }}
+    ></h1>
                 );
               })}
-            </div>
+            </div></>
+          }
           </div>
           <div>
-            <h1 className="text-xl font-medium mt-6 mb-1.5" >Price</h1>
+            <h1 className="text-base md:text-xl font-medium mt-6 mb-1.5" >Price</h1>
             <Slider
               range={{
                 draggableTrack: true,
               }}
-              className="w-[300px]"
+              className="w-[80%]"
               defaultValue={[20, 50]}
             />
           </div>
           <div>
-            <h1 className="text-xl font-medium mt-6 mb-1.5">Shop By Rating</h1>
+            <h1 className="text-base md:text-xl font-medium mt-6 mb-1.5">Shop By Rating</h1>
             {ratingfilter.map((single, index) => {
               return (
                 <div className="block">
@@ -267,7 +275,7 @@ const Productsscreen = () => {
                     <div className=" overflow-hidden ">
                       <div className="aspect-[3/4] relative group transition-transform transform hover:scale-105  duration-500">
                         <img
-                          src={images[1]}
+                          src={images[0]}
                           alt="trendimg"
                           className="object-cover w-full h-full rounded-t-md  "
                         />
@@ -275,7 +283,7 @@ const Productsscreen = () => {
                       </div>
                     </div>
                     <div className=" bg-[#f1eeee] p-2">
-                      <h1 className="font-bold text-base xl:text-lg">
+                      <h1 className="font-bold text-base xl:text-lg text-gray-600">
                         {brand}
                       </h1>
                       <h1 className=" text-sm  md:text-base  font-normal line-clamo-1">
