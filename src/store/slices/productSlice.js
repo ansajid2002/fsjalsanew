@@ -24,10 +24,10 @@ const initialState = {
     currency_symbol:"INR",
     price:1000,
     images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
-   
+    size:["S","M","L","XL","XXL"],
     product_variants:{
         color:[
-          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},},
           {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
           {name:"#000000",values:{images:["/images/productimages/men2.jpg","/images/productimages/boys1.jpg"],price:3000,size:["S","M","L"]},}
         ]
@@ -196,9 +196,9 @@ const initialState = {
       ],
       product_type:"variant",
       price:1000,
-      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],
+      images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"]
 
-      
+      ,size:["S","M","L","XL","XXL"],
       category_id:101,
       subcategory_id:1001,
       vendor_id:501,
@@ -232,12 +232,13 @@ const initialState = {
       
       product_variants:{
         color:[
-          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000,size:["S","M","L","XL","XXL"]},},
+          {name:"#00008b",values:{images:["/images/productimages/boys1.jpg","/images/productimages/boys2.jpg"],price:1000},},
           {name:"#ff7701",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S"]}},
           {name:"#000000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},},
           {name:"#ff0000",values:{images:["/images/productimages/boys3.jpg","/images/productimages/boys1.jpg"],price:2000,size:["S","M","L"]},}
         ]
-      },
+      }
+      ,size:["S","M","L","XL","XXL"],
       category_id:101,
       subcategory_id:1001,
       vendor_id:501,
