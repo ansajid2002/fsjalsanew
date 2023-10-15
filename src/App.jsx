@@ -10,6 +10,9 @@ import Footer from './components/footer/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Productsscreen from './pages/Productsscreen'
 import Productoverview from './pages/Productoverview'
+import Login from './pages/loginpages/Login'
+import Forgetpassword from './pages/loginpages/Forgetpassword'
+import Signup from './pages/loginpages/Signup'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +23,10 @@ function App() {
 
     <Header/>
     <Routes>
+    <Route path="/login" element={<Login/>} />
+    <Route path="/forgetpassword" element={<Forgetpassword/>} />
     <Route exact path="/" element={<Homescreen/>} />
+    <Route path="/signup" element={<Signup/>} />
     {
       categoriesList.map((single,index) => {
 
