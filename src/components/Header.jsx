@@ -6,7 +6,7 @@ import { GrNotification } from "react-icons/gr"
 import { VscAccount } from "react-icons/vsc"
 import indianflag from "../assets/india-flag.png"
 import fslogoblack from "../assets/fslogo-black.png"
-import { Input } from 'antd';
+import { Input, Modal } from 'antd';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
@@ -35,13 +35,13 @@ const Header = () => {
                 settings: {
                     slidesToShow: 4,
                 }
-            },{
+            }, {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 5,
                 }
             },
-            
+
             // Add more breakpoints and settings as needed
         ]
     };
@@ -49,11 +49,22 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     const showDrawer = () => {
-      setOpen(true);
+        setOpen(true);
     };
-  
+
     const onClose = () => {
-      setOpen(false);
+        setOpen(false);
+    };
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
     };
 
 
@@ -61,13 +72,15 @@ const Header = () => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
-
+        if (windowWidth > 768) {
+            setIsModalOpen(false);
+        }
         window.addEventListener("resize", handleResize);
 
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, []);
+    }, [windowWidth]);
 
     return (
         <div className=' '>
@@ -103,20 +116,26 @@ const Header = () => {
                         <VscAccount size={18} />
                         <GrNotification size={18} className=' hidden md:block' />
                         <BsCart size={18} />
-                        <BsSearch className='block md:hidden' />
+                        <BsSearch className='block md:hidden' onClick={showModal} />
+                        <Modal title="Search products, categories, ..." open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{ className: ' bg-blue-500' }} cancelButtonProps={{className:'bg-red-500 text-white'}}>
+                            <div className='relative my-4  '>
+                                <Input placeholder="Search here..." className=' ' />
+                                <BsSearch size={16} className='absolute top-2 right-2' />
+                            </div>
+                        </Modal>
 
                     </div>
                 </div>
-                <Button  onClick={showDrawer} className='block md:hidden  order-3'><GiHamburgerMenu /></Button>
+                <Button onClick={showDrawer} className='block md:hidden  order-3'><GiHamburgerMenu /></Button>
                 <Drawer className='' title="Menu" placement="right" onClose={onClose} open={open}>
-        <div className='text-white'>
-        <div className=' ' >
+                    <div className='text-white'>
+                        <div className=' ' >
                             {
                                 categoriesList.map((single, index) => {
                                     return (
-                                            <div key={index} className=' mb-3.5 '>
-                                                <button className=' text-[15px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
-                                            </div>
+                                        <div key={index} className=' mb-3.5 '>
+                                            <button className=' text-[15px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
+                                        </div>
 
                                     )
                                 })
@@ -125,8 +144,8 @@ const Header = () => {
                         <div className='border-t pt-4'>
                             <button className='font-medium text-lg bg-gray-100 px-2 py-1 pt-0.5 rounded-md text-black'>Sign In</button>
                         </div>
-        </div>
-      </Drawer>
+                    </div>
+                </Drawer>
             </div>
             <div className='border-b  border-gray-200 py-1'>
                 {
@@ -151,7 +170,7 @@ const Header = () => {
                             <Slider {...settings}>
                                 {
                                     categoriesList.slice(0, 10).map((single, index) => {
-                                        const { category_name,category_image_url } = single
+                                        const { category_name, category_image_url } = single
 
                                         return (
                                             <div>
