@@ -6,7 +6,8 @@ const initialState = {
     "category_id": 101,
     "category_name": "Salwar Kameez",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T07:22:46.378Z",
     "updated_at": "2023-09-13T07:22:46.378Z",
@@ -26,7 +27,8 @@ const initialState = {
     "category_id": 103,
     "category_name": "Mens",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:34:31.390Z",
     "updated_at": "2023-09-13T09:34:31.390Z",
@@ -36,7 +38,8 @@ const initialState = {
     "category_id": 104,
     "category_name": "Blouses",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:34:43.165Z",
     "updated_at": "2023-09-13T09:34:43.165Z",
@@ -46,7 +49,8 @@ const initialState = {
     "category_id": 105,
     "category_name": "Wedding",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:34:57.867Z",
     "updated_at": "2023-09-13T09:34:57.867Z",
@@ -56,7 +60,8 @@ const initialState = {
     "category_id": 106,
     "category_name": "Unstitched",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:35:13.289Z",
     "updated_at": "2023-09-13T09:35:13.289Z",
@@ -66,7 +71,8 @@ const initialState = {
     "category_id": 107,
     "category_name": "Kids",
     "category_description": " ",
-    "category_image_url": "  ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:35:27.274Z",
     "updated_at": "2023-09-13T09:35:27.274Z",
@@ -76,7 +82,8 @@ const initialState = {
     "category_id": 108,
     "category_name": "Home & Living",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:35:39.240Z",
     "updated_at": "2023-09-13T09:35:39.240Z",
@@ -86,7 +93,8 @@ const initialState = {
     "category_id": 109,
     "category_name": "Formal",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:35:51.731Z",
     "updated_at": "2023-09-13T09:35:51.731Z",
@@ -96,7 +104,8 @@ const initialState = {
     "category_id": 110,
     "category_name": "Party Wear",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:36:03.205Z",
     "updated_at": "2023-09-13T09:36:03.205Z",
@@ -106,7 +115,8 @@ const initialState = {
     "category_id": 43,
     "category_name": "Automotive",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:36:16.960Z",
     "updated_at": "2023-09-13T09:36:16.960Z",
@@ -116,7 +126,8 @@ const initialState = {
     "category_id": 44,
     "category_name": "Baby & Kids",
     "category_description": " ",
-    "category_image_url": " ",
+    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+
     "category_status": true,
     "created_at": "2023-09-13T09:36:29.708Z",
     "updated_at": "2023-09-13T09:36:29.708Z",
