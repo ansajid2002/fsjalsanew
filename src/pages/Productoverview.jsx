@@ -23,6 +23,9 @@ const Productoverview = () => {
   const originalName = decodeURI(parts[1]);
   console.log(originalName);
   console.log(id);
+  console.log("selectedcolorvariant");
+  console.log(selectedcolorvariant);
+  console.log("selectedcolorvariant");
 
   const categoryId = categoriesList.filter((single) => {
     if (single.category_name === originalName) {
@@ -34,36 +37,40 @@ const Productoverview = () => {
   const productToShow = productsList.find((single) => {
     return single.category_id === categoryId && single.product_id == id;
   });
-  console.log("productToShow");
-  console.log(productToShow);
-  console.log("productToShow");
 
   // console.log(productToShow.product_variants.color["#00008b"].price);
-  const { images, brand, product_name, product_id, rating, price, discount, reviews } = productToShow
+  const {brand, product_name, product_id, rating,  discount, reviews ,product_variants} = productToShow
 
   useEffect(() => {
 
-    if (productToShow.hasOwnProperty("product_variants")) {
-      if (!selectedcolorvariant) {
-        setSelectedcolorvariant(productToShow.product_variants.color[0])
+      if (selectedcolorvariant.length === 0) {
+        setSelectedcolorvariant(productToShow.product_variants[0])
 
       }
-      const uniqueColors = [...new Set(productToShow.product_variants.color.map((single) => single.name))]
+    if (productToShow) {
 
+      const uniqueColors = [...new Set(productToShow.product_variants.map((single) => single.color))]
+
+ 
       setColorsfilter(uniqueColors);
-    }
+    
 
-    setMainImage(productToShow.product_variants ? productToShow.product_variants.color[0].values.images[0] : images[0])
+    setMainImage( productToShow.product_variants[0].images[0] )
+    }
 
 
   }, [currentURL, categoryId])
 
   const changevariant = (single) => {
 
-    productToShow.product_variants.color.map((s) => {
-      if (s.name === single) {
+    console.log("single");
+    console.log(single);
+    console.log("single");
+
+    productToShow.product_variants.map((s) => {
+      if (s.color === single) {
         setSelectedcolorvariant(s)
-        setMainImage(s.values.images[0])
+        setMainImage(s.images[0])
       }
     })
   }
@@ -74,20 +81,16 @@ const Productoverview = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    vertical: true, // Add this line to enable vertical mode
     centerPadding: '1rem',
 
   };
   const [mainImage, setMainImage] = useState([]);
 
   const handleImageClick = (newImage) => {
-    console.log(newImage);
-    console.log(newImage);
-    console.log(newImage);
     setMainImage(newImage);
   };
-  console.log("mainImage");
-  console.log(images[0]);
-  console.log("mainImage");
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // Update the window width when the component mounts
@@ -104,45 +107,43 @@ const Productoverview = () => {
   }, []);
 
 
-  console.log(" productToShow.hasOwnProperty(product_variants)")
-  console.log(productToShow.hasOwnProperty("product_variants"))
-  console.log("productToShow.hasOwnProperty(product_variants)")
   return (
-    <div className="flex  justify-center">
-      <div className="w-[35%] ">
-        <div className="aspect-[3/4]  mx-auto">
+    <div className=''>
+    <section className=' max-w-[1600px] mx-auto'>
+    <div className="flex  justify-center mx-auto">
+   
+
+   <div className=" mt-2  max-h-[380px] lg:max-h-[500px] scrollable-container">
+      {selectedcolorvariant.images &&
+        selectedcolorvariant.images.map((singleimage, index) => (
+          <div key={index} className={`p-2 w-[70px] lg:w-[80px]`}>
+            <img
+              className="w-full h-full object-cover rounded-lg cursor-pointer"
+              src={singleimage}
+              alt={`ovimg${index + 2}`}
+              onClick={() => handleImageClick(singleimage)}
+            />
+          </div>
+        ))}
+    
+   </div>
+      <div className="mx-3 ">
+        <div className="aspect-[3/4] h-[400px] lg:h-[550px]  mx-auto">
           <img
             src={mainImage}
             alt="ovimg1"
             className="w-full h-full object-cover rounded-md"
           />
         </div>
-        <div className="mx-auto">
-          <Slider {...settings}>
-            {(selectedcolorvariant.values.images ? selectedcolorvariant.values.images : images).map((singleimage, index) => (
-
-              <div className="" key={index}>
-                <div className="m-2 aspect-[3/4]">
-
-                  <img
-                    className="w-full h-full object-cover rounded-lg"
-                    src={singleimage}
-                    alt={`ovimg${index + 2}`}
-                    onClick={() => handleImageClick(singleimage)}
-                  />
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
+        
       </div>
       <div className="w-[40%] border">
         <h1>{productToShow.brand}</h1>
         <h1>{productToShow.product_name}</h1>
         <div className="flex items-center  space-x-2">
-          <h1 className=" text-base lg:text-lg font-bold">{`${c_symbol} ${(selectedcolorvariant.values.price ? selectedcolorvariant.values.price : price) - (selectedcolorvariant.values.price ? selectedcolorvariant.values.price : price) * (discount / 100)
+          <h1 className=" text-base lg:text-lg font-bold">{`${c_symbol} ${(selectedcolorvariant.price) - (selectedcolorvariant.price) * (discount / 100)
             }`}</h1>
-          <h1 className="  text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${selectedcolorvariant.values.price ? selectedcolorvariant.values.price : price}`}</h1>
+          <h1 className="  text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${ selectedcolorvariant.price}`}</h1>
           <h1 className="text-[14px] lg:text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
         </div>
         <div className="flex space-x-4">
@@ -157,7 +158,6 @@ const Productoverview = () => {
           </div>
           <h1 className="flex  items-center sm:text-[12px] lg:text-[15px]">{`${reviews} reviews`}</h1>
         </div>
-        {(productToShow.hasOwnProperty("product_variants") && productToShow.product_variants.color) && (
           <div>
             {
               colorsfilter.length !== 0 &&
@@ -175,24 +175,20 @@ const Productoverview = () => {
                 </div></>
             }
           </div>
-        )
-
-        }
-        {
-          productToShow.hasOwnProperty("size") && (
+       
             <div>
 
               <h1 className="text-[18px] font-medium mt-4">Size</h1>
               <div className="flex items-center space-x-4">
-                {productToShow.size.map((single) => (
+                {selectedcolorvariant.size?.map((single) => (
                   <div className="border bg-gray-100 rounded-full w-[35px] h-[35px] flex justify-center items-center">
                     <h1>{single}</h1>
                   </div>
                 ))}
               </div>
             </div>
-          )
-        }
+          
+        
         {
           productToShow.hasOwnProperty("add_ons") && (
             <div>
@@ -245,7 +241,8 @@ const Productoverview = () => {
         </div>
 
       </div>
-
+</div>
+</section>
     </div>
   )
 }

@@ -37,7 +37,7 @@ const Myroutes = () => {
     <Route path="/forgetpassword" element={<Forgetpassword/>} />
     <Route path="/signup" element={<Signup/>} />
     <Route path="/new-password" element={<Newpassword/>} />
-    {
+     {
       categoriesList.map((single,index) => {
 
         return (
@@ -52,7 +52,7 @@ const Myroutes = () => {
     <Route key={index}  path={`/${single.category_name}/:id`} element={<Productoverview/>} />
         )
       })
-    }
+    } 
 
     </Routes>
     {currentURL !== "/login" && currentURL !== "/forgetpassword" && currentURL !== "/signup" && currentURL !== "/new-password"  && (

@@ -109,3 +109,18 @@
 .ant-drawer-body {
    background-color: black;
 }
+
+
+/* ///overview//////////
+ */
+
+ .scrollable-container {
+   max-height: 300px; /* Set your desired fixed height */
+   overflow-y: scroll;
+   scrollbar-width: none; /* Hide Firefox scrollbar */
+   -ms-overflow-style: none; /* Hide IE/Edge scrollbar */
+ }
+ 
+ .scrollable-container::-webkit-scrollbar {
+   width: 0 !important; /* Hide Webkit (Chrome, Safari) scrollbar */
+ }

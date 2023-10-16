@@ -155,7 +155,10 @@ const Homescreen = () => {
         <Slider {...settings}>
         {
           productsList.map((single) => {
-            const { images,product_name } = single
+            const { product_variants,product_name } = single
+            console.log("product_variants")
+            console.log(product_variants[0].images[0])
+            console.log("product_variants")
 
             return (
               <div>
@@ -163,7 +166,7 @@ const Homescreen = () => {
               <div className='' >
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
-                <img  src={images[0]} alt="trendimg" className=' object-cover w-full h-full rounded-lg' />
+                <img  src={product_variants[0].images[0]} alt="trendimg" className=' object-cover w-full h-full rounded-lg' />
                 </div>
                     <h1 className="text-center text-[0.9rem]  md:text-xl font-medium mt-1">{product_name}</h1>
                 </div>
@@ -186,7 +189,7 @@ const Homescreen = () => {
         <Slider {...settings2}>
         {
           productsList.map((single) => {
-            const { images,product_name } = single
+            const {product_variants ,product_name} = single
 
             return (
               <div>
@@ -194,7 +197,7 @@ const Homescreen = () => {
               <div className='' >
               
                 <div className=' aspect-[3/4]'>
-                <img  src={images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
+                <img  src={product_variants[0].images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
                 </div>
                 <div className='text-center bg-gray-200 py-1'>
 
@@ -225,7 +228,7 @@ const Homescreen = () => {
         <Slider {...settings}>
         {
           productsList.map((single) => {
-            const { images,product_name,brand,price ,discount} = single
+            const { product_variants,product_name,brand,discount} = single
             console.log(single.brand)
 
             return (
@@ -234,7 +237,7 @@ const Homescreen = () => {
               <div className='' >
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
-                <img  src={images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
+                <img  src={product_variants[0].images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
                 </div>
                 <div className='text-center bg-gray-200 py-1'>
 
@@ -242,8 +245,8 @@ const Homescreen = () => {
                       {brand}
                     </h1>
                     <div className='flex items-center justify-center space-x-2'>
-                    <h1 className='text-xl font-bold'>{`${c_symbol} ${price - price*(discount/100)}`}</h1>
-                    <h1 className=' -mt-0.5 text-lg  text-gray-600 line-through'>{`${c_symbol} ${price}`}</h1>
+                    <h1 className='text-xl font-bold'>{`${c_symbol} ${product_variants[0].price - product_variants[0].price*(discount/100)}`}</h1>
+                    <h1 className=' -mt-0.5 text-lg  text-gray-600 line-through'>{`${c_symbol} ${product_variants[0].price}`}</h1>
                     <h1 className='text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
                     </div>
                     <h1 className=" text-sm  md:text-lg font-medium line-clamo-1">{product_name}</h1>
@@ -276,7 +279,7 @@ const Homescreen = () => {
         <Slider {...settings}>
         {
           productsList.map((single) => {
-            const { images,product_name,brand,price ,discount,rating} = single
+            const {product_name,brand,product_variants,discount,rating} = single
             console.log(single.brand)
 
             return (
@@ -285,7 +288,7 @@ const Homescreen = () => {
               <div className='' >
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
-                <img  src={images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
+                <img  src={product_variants[0].images[0]} alt="trendimg" className=' object-cover w-full h-full    rounded-t-md' />
                 </div>
                 <div className='text-center bg-gray-200 py-1'>
 
@@ -293,8 +296,8 @@ const Homescreen = () => {
                       {brand}
                     </h1>
                     <div className='flex items-center justify-center space-x-2'>
-                    <h1 className='text-xl font-bold'>{`${c_symbol} ${price - price*(discount/100)}`}</h1>
-                    <h1 className=' -mt-0.5 text-lg text-gray-600 line-through'>{`${c_symbol} ${price}`}</h1>
+                    <h1 className='text-xl font-bold'>{`${c_symbol} ${product_variants[0].price - product_variants[0].price*(discount/100)}`}</h1>
+                    <h1 className=' -mt-0.5 text-lg text-gray-600 line-through'>{`${c_symbol} ${product_variants[0].price}`}</h1>
                     <h1 className='text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
                     </div>
                     <h1 className=" text-sm  md:text-lg font-medium line-clamo-1">{product_name}</h1>
