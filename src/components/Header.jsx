@@ -10,6 +10,7 @@ import { Input } from 'antd';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
+import { Button, Drawer } from 'antd';
 
 const Header = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -44,6 +45,17 @@ const Header = () => {
             // Add more breakpoints and settings as needed
         ]
     };
+
+    const [open, setOpen] = useState(false);
+
+    const showDrawer = () => {
+      setOpen(true);
+    };
+  
+    const onClose = () => {
+      setOpen(false);
+    };
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -80,13 +92,13 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex items-center justify-between mt-2  md:my-1 px-1 md:px-10 '>
-                <Link to="/" className='order-2 md:order-1'><img src={fslogoblack} alt="main-logo" className='h-[38px] md:h-[50px]' /></Link>
+                <Link to="/" className='order-2 md:order-1 -ml-4 md:ml-0'><img src={fslogoblack} alt="main-logo" className='h-[38px] md:h-[50px]' /></Link>
                 <div className='flex items-center md:space-x-10  order-1 md:order-2'>
                     <div className='relative hidden md:block '>
                         <Input placeholder="Search here..." className=' w-[200px]' />
                         <BsSearch className='absolute top-2 right-2' />
                     </div>
-                    <div className='flex items-center space-x-2 md:space-x-4'>
+                    <div className='flex items-center space-x-3 md:space-x-4'>
                         <BsHeart size={18} className=' hidden md:block' />
                         <VscAccount size={18} />
                         <GrNotification size={18} className=' hidden md:block' />
@@ -95,7 +107,26 @@ const Header = () => {
 
                     </div>
                 </div>
-                <div className='block md:hidden  order-3'><GiHamburgerMenu /></div>
+                <Button  onClick={showDrawer} className='block md:hidden  order-3'><GiHamburgerMenu /></Button>
+                <Drawer className='' title="Menu" placement="right" onClose={onClose} open={open}>
+        <div className='text-white'>
+        <div className=' ' >
+                            {
+                                categoriesList.map((single, index) => {
+                                    return (
+                                            <div key={index} className=' mb-3.5 '>
+                                                <button className=' text-[15px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
+                                            </div>
+
+                                    )
+                                })
+                            }
+                        </div>
+                        <div className='border-t pt-4'>
+                            <button className='font-medium text-lg bg-gray-100 px-2 py-1 pt-0.5 rounded-md text-black'>Sign In</button>
+                        </div>
+        </div>
+      </Drawer>
             </div>
             <div className='border-b  border-gray-200 py-1'>
                 {
@@ -115,7 +146,7 @@ const Header = () => {
                                 })
                             }
                         </div> :
-                        <div>
+                        <div className='mx-2'>
 
                             <Slider {...settings}>
                                 {
@@ -124,7 +155,7 @@ const Header = () => {
 
                                         return (
                                             <div>
-                                                <div className='flex items-center justify-center mx-1.5 md:mx-4 my-2 sm:my-4'>
+                                                <div className='flex items-center justify-center mx-1.5 sm:mx-4 my-2 sm:my-4'>
                                                     <div className='' >
                                                         {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                                                         <div className=' aspect-[4/4] border rounded-full p-3  '>

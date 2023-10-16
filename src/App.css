@@ -93,3 +93,19 @@
         }
         
       }
+
+
+/* //////////////////////header/////////////////////////////// */
+
+.ant-drawer-header {
+   background-color: white;
+   color: white;
+}
+
+.ant-drawer-title {
+   color: white;
+
+}
+.ant-drawer-body {
+   background-color: black;
+}
