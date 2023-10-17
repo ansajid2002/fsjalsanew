@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { BsBoxSeam, BsInstagram, BsTruck, BsTwitter } from 'react-icons/bs';
-import { FaFacebook, FaStar } from 'react-icons/fa';
+import { FaArrowUp, FaChevronDown, FaChevronUp, FaFacebook, FaStar, FaUps } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
-import { Button, Input, Space } from 'antd';
+import { Button, Checkbox, Input, Space } from 'antd';
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 const Productoverview = () => {
 
@@ -85,6 +85,17 @@ const Productoverview = () => {
     centerPadding: '1rem',
 
   };
+
+  const settings2 = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: '1rem',
+    dots: true
+
+  };
   const [mainImage, setMainImage] = useState([]);
 
   const handleImageClick = (newImage) => {
@@ -106,29 +117,87 @@ const Productoverview = () => {
     };
   }, []);
 
+  const onChange = (e) => {
+    console.log(`checked = ${e.target.checked}`);
+  };
+
+  const containerRef = useRef(null);
+  const [isScrollAtTop, setIsScrollAtTop] = useState(true);
+  const [isScrollAtBottom, setIsScrollAtBottom] = useState(false);
+
+  const handleScrollUp = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop -= 100;
+    }
+  };
+
+  const handleScrollDown = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop += 100;
+    }
+  };
+
+  const handleScroll = () => {
+    const container = containerRef.current;
+    if (container) {
+      setIsScrollAtTop(container.scrollTop === 0);
+      setIsScrollAtBottom(container.scrollHeight - container.scrollTop === container.clientHeight);
+    }
+  };
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.addEventListener('scroll', handleScroll);
+      handleScroll(); // Initial check
+    }
+
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
 
   return (
-    <div className=''>
+    <div className='my-8'>
     <section className=' max-w-[1600px] mx-auto'>
-    <div className="flex  justify-center mx-auto">
-   
-
-   <div className=" mt-2  max-h-[380px] lg:max-h-[500px] scrollable-container">
-      {selectedcolorvariant.images &&
-        selectedcolorvariant.images.map((singleimage, index) => (
-          <div key={index} className={`p-2 w-[70px] lg:w-[80px]`}>
-            <img
-              className="w-full h-full object-cover rounded-lg cursor-pointer"
-              src={singleimage}
-              alt={`ovimg${index + 2}`}
-              onClick={() => handleImageClick(singleimage)}
-            />
-          </div>
-        ))}
+    <div className="md:flex  justify-center mx-auto">
+   {
+    windowWidth > 768 ? 
+   <div className='md:flex  justify-center '>
+    {
+      windowWidth > 1024 &&
     
-   </div>
-      <div className="mx-3 ">
-        <div className="aspect-[3/4] h-[400px] lg:h-[550px]  mx-auto">
+    <div className='ml-16 xl:ml-28 '>
+      <div className={`bg-gray-300 py-1 rounded-md ${isScrollAtTop ? 'opacity-0' : ''}`} onClick={handleScrollUp}>
+        <button className="flex items-center justify-center mx-auto px-2">
+          <FaChevronUp />
+        </button>
+      </div>
+      <div className={`mt-2 max-h-[485px] lg:max-h-[540px] scrollable-container scroll-smooth`} ref={containerRef}>
+        {selectedcolorvariant.images &&
+          selectedcolorvariant.images.map((singleimage, index) => (
+            <div key={index} className={`p-2 w-[70px] lg:w-[80px]`}>
+              <img
+                className="w-full h-full object-cover rounded-lg cursor-pointer"
+                src={singleimage}
+                alt={`ovimg${index + 2}`}
+                onClick={() => handleImageClick(singleimage)}
+              />
+            </div>
+          ))}
+      </div>
+      <div className={`bg-gray-300 py-1 rounded-md ${isScrollAtBottom ? ' opacity-0' : ''}`} onClick={handleScrollDown}>
+        <button className="flex items-center justify-center mx-auto">
+          <FaChevronDown size={20} />
+        </button>
+      </div>
+    </div>
+    }
+
+
+      <div className="mx-6 ">
+        <div className="aspect-[3/4] h-[550px] lg:h-[600px]  mx-auto">
           <img
             src={mainImage}
             alt="ovimg1"
@@ -136,39 +205,61 @@ const Productoverview = () => {
           />
         </div>
         
-      </div>
-      <div className="w-[40%] border">
-        <h1>{productToShow.brand}</h1>
-        <h1>{productToShow.product_name}</h1>
-        <div className="flex items-center  space-x-2">
-          <h1 className=" text-base lg:text-lg font-bold">{`${c_symbol} ${(selectedcolorvariant.price) - (selectedcolorvariant.price) * (discount / 100)
+      </div> </div> : 
+       <div className="mx-auto sm:max-w-[400px]" >
+
+       <Slider {...settings2}>
+
+         {selectedcolorvariant.images?.map((image, index) => (
+        <div>
+           <div className="aspect-[3/4] mx-4 " >
+             <img style={{ width: '100%', height: '100%', objectFit: 'cover'}}
+             className='  rounded-lg'
+               src={image}
+               alt={`ovimg${index + 2}`}
+               onClick={() => handleImageClick(image)}
+             />
+         </div>
+           </div>
+         ))}
+       </Slider>
+
+     </div>}
+
+
+      <div className="w-[90%] sm:w-[42%] xl:w-[50%] mt-8 md:mt-2 ml-4 sm:mx-auto md:ml-0 ">
+        <h1 className=' font-bold text-base xl:text-xl text-gray-500'>{productToShow.brand}</h1>
+        <h1 className='text-base xl:text-xl '>{productToShow.product_name}</h1>
+        <div className="flex items-center  space-x-2 my-1">
+          <h1 className=" text-base xl:text-xl font-bold">{`${c_symbol} ${(selectedcolorvariant.price) - (selectedcolorvariant.price) * (discount / 100)
             }`}</h1>
-          <h1 className="  text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${ selectedcolorvariant.price}`}</h1>
-          <h1 className="text-[14px] lg:text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
+          <h1 className="  text-base  font-normal text-gray-500 line-through">{`${c_symbol} ${ selectedcolorvariant.price}`}</h1>
+          <h1 className="text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
         </div>
-        <div className="flex space-x-4">
-          <div className="flex items-center space-x-1 bg-[#0000ff] px-1.5 py-0 md:py-1 rounded-xl ">
+        <div className="flex space-x-4 mt-1">
+          <div className="flex items-center space-x-1 bg-[#0000ff] px-1 lg:px-2 py-0 lg:py-1 rounded-lg ">
             <FaStar
               color="white"
-              size={windowWidth > 992 ? 16 : 14}
+              size={windowWidth > 992 ? 14 : 12}
             />
             <h1 className="text-white text-[12px] sm:text-sm ">
               {rating}
             </h1>
           </div>
-          <h1 className="flex  items-center sm:text-[12px] lg:text-[15px]">{`${reviews} reviews`}</h1>
+          <h1 className="flex  items-center sm:text-[12px] lg:text-[15px] tracking-wide">{`${reviews} reviews`}</h1>
         </div>
           <div>
             {
               colorsfilter.length !== 0 &&
-              <><h1 className="text-base md:text-xl font-medium mt-6 mb-1.5">Colors</h1>
-                <div className="flex space-x-2">
+              <><h1 className="text-lg xl:text-xl font-medium mt-2 xl:mt-3 mb-1">Colors</h1>
+                <div className="flex space-x-3">
                   {colorsfilter.map((single, index) => {
 
                     return (
                       <h1 onClick={() => changevariant(single)}
                         key={index}
-                        style={{ backgroundColor: single, width: '20px', height: '20px', borderRadius: '50%' }}
+                        style={{ backgroundColor: single }}
+                        className='h-[20px] xl:h-[25px] w-[20px] xl:w-[25px] rounded-full'
                       ></h1>
                     );
                   })}
@@ -178,11 +269,11 @@ const Productoverview = () => {
        
             <div>
 
-              <h1 className="text-[18px] font-medium mt-4">Size</h1>
+              <h1 className="text-lg xl:text-xl font-medium mt-2 xl:mt-3 mb-1">Size</h1>
               <div className="flex items-center space-x-4">
                 {selectedcolorvariant.size?.map((single) => (
-                  <div className="border bg-gray-100 rounded-full w-[35px] h-[35px] flex justify-center items-center">
-                    <h1>{single}</h1>
+                  <div className="border bg-gray-100 rounded-full w-[30px] xl:w-[35px] h-[30px] xl:h-[35px] flex justify-center items-center">
+                    <h1 className='text-[13px] xl:text-base'>{single}</h1>
                   </div>
                 ))}
               </div>
@@ -192,13 +283,17 @@ const Productoverview = () => {
         {
           productToShow.hasOwnProperty("add_ons") && (
             <div>
-              <h1 className="text-[18px] font-medium mt-4">Add On's</h1>
+              <h1 className="text-lg xl:text-xl font-medium mt-2 xl:mt-3 mb-1">Add On's</h1>
               {
                 productToShow.add_ons.map((single) => {
                   return (
                     <div className="flex">
-                      <h1 className="w-[250px]">{single.title}</h1>
-                      <h1>{single.price}</h1>
+                 
+                          <Checkbox onChange={onChange}>
+                      <h1 className="w-[200px] lg:w-[250px] text-[14px] xl:text-base">{single.title}</h1>
+                          </Checkbox>
+                        
+                          <h1>{single.price}</h1>
                     </div>
                   )
                 })
@@ -209,33 +304,33 @@ const Productoverview = () => {
         {/* /////BTN CONTAINER????????????????????????//// */}
 
         <div>
-          <div className="flex space-x-3 mt-4">
+          <div className="flex space-x-3 mt-4 xl:mt-6 mb-2 xl:mb-4">
             <Input placeholder="Enter Delivery Pincode" className="max-w-[200px]" />
-            <Button className=' bg-blue-500 text-white hover:bg-gray-100'>Check</Button>
+            <Button className=' bg-[#167bdf] text-white hover:bg-gray-100'>Check</Button>
           </div>
-          <div className="flex items-center space-x-3 mt-4">
-            <div className="flex items-center space-x-2 border border-gray-400  rounded-md p-1 py-0.5">
+          <div className="flex items-center space-x-3 my-4">
+            <div className="flex items-center space-x-2 border border-gray-400  rounded-md p-1 py-0.5 mr-1 lg:mr-4">
 
               <AiOutlineMinus size={16} />
               <h1 className="text-xl">{productToShow.quantity}</h1>
               <AiOutlinePlus size={16} />
             </div>
-            <Button className=' bg-blue-500 text-white hover:bg-gray-100 '>Buy Now</Button>
+            <Button className=' bg-blue-500 text-white hover:bg-gray-100'>Buy Now</Button>
             <Button className=' bg-blue-500 text-white hover:bg-gray-100'>Add To Cart</Button>
           </div>
         </div>
         {/* ////////////////////ADD TO WISHLIST?///////////////// */}
-        <div className="flex space-x-6 mt-4">
+        <div className="lg:flex lg:space-x-6 space-y-4 md:space-y-3 lg:space-y-0 mt-4">
           <div className="flex items-center">
-            <h1 className="text-[14px] mr-1">Add To Wishlist : </h1>
-            <AiOutlineHeart size={24} color='#00008b'/>
+            <h1 className="text-[14px] xl:text-base mr-2">Add To Wishlist : </h1>
+            <AiOutlineHeart size={24} color='#167bdf'/>
           </div>
           <div className="flex items-center">
-          <h1 className="text-[14px] mr-1">Explore For More :</h1>
+          <h1 className="text-[14px] xl:text-base mr-2">Explore For More :</h1>
           <div className="flex items-center space-x-3">
-            <BsInstagram size={20} color='#00008b'/>
-            <FaFacebook size={20} color='#00008b'/>
-            <BsTwitter size={20} color='#00008b'/>
+            <BsInstagram size={20} color='#167bdf'/>
+            <FaFacebook size={20} color='#167bdf'/>
+            <BsTwitter size={20} color='#167bdf'/>
           </div>
           </div>
         </div>

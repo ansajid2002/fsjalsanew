@@ -156,7 +156,7 @@ const initialState = {
     },
     {
       product_id: 126,
-      product_name: "Candy Pink Sharara Suit",
+      product_name: "product For testing product overview",
       description: "Pro desc",
       discount: 30,  //in percent
       quantity: 10,
