@@ -87,7 +87,6 @@ const Productoverview = () => {
   };
 
   const settings2 = {
-    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 1,

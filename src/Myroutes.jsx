@@ -14,6 +14,14 @@ import Login from './pages/loginpages/Login'
 import Forgetpassword from './pages/loginpages/Forgetpassword'
 import Signup from './pages/loginpages/Signup'
 import Newpassword from './pages/loginpages/Newpassword'
+import Profilesidebar from './components/profile/Profilesidebar'
+import Account from './pages/Account/Account'
+import Myorders from './pages/Account/Myorders'
+import Payments from './pages/Account/Payments'
+import Notifications from './pages/Account/Notifications'
+import Addaddress from './pages/Account/Addaddress'
+import Savedaddress from './pages/Account/Savedaddress'
+
 
 const Myroutes = () => {
 
@@ -37,6 +45,12 @@ const Myroutes = () => {
     <Route path="/forgetpassword" element={<Forgetpassword/>} />
     <Route path="/signup" element={<Signup/>} />
     <Route path="/new-password" element={<Newpassword/>} />
+    <Route path="/account" element={<Account/> } />
+    <Route path="/myorders" elements = {<Myorders/>} />
+    <Route path="/payments" element= {<Payments />} />
+    <Route path="/notifications" element= {<Notifications/> } />
+    <Route path="/addaddress" element={<Addaddress/> } />
+    <Route path="/savedaddress" element={<Savedaddress/> } /> 
      {
       categoriesList.map((single,index) => {
 

@@ -113,7 +113,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center space-x-3 md:space-x-4'>
                         <BsHeart size={18} className=' hidden md:block' />
-                        <VscAccount size={18} />
+                        <Link to ="/account"> <VscAccount size={18}  /></Link>
                         <GrNotification size={18} className=' hidden md:block' />
                         <BsCart size={18} />
                         <BsSearch className='block md:hidden' onClick={showModal} />
