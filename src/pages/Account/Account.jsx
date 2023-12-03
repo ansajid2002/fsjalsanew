@@ -13,18 +13,21 @@ const onFinish = (values) => {
 
 const Account = () => {
   return (
-    <div className='flex mx-10'>
+    <div className='flex py-10 mx-2 lg:mx-5 xl:mx-8'>
+      <div className='hidden md:block'>
     <Profilesidebar/>
-    <main className='border py-4 px-10'>
+
+      </div>
+    <main className='border rounded-sm shadow-md py-4 px-10 mx-auto'>
         <h1 className='text-xl font-medium'>Add New Address</h1>
-        <div className='w-[600px]'>
+        <div className='w-[350px] lg:w-[500px] xl:w-[600px]'>
         <Form
     name="basic"
     labelCol={{
       span: 8,
     }}
     wrapperCol={{
-      span: 16,
+      // span: 16,
     }}
     style={{
       maxWidth: 600,
@@ -94,10 +97,10 @@ const Account = () => {
     <Form.Item
       wrapperCol={{
         offset: 8,
-        span: 16,
+        // span: 30,
       }}
     >
-      <Button type="primary" htmlType="submit" className='bg-black tracking-wide'>
+      <Button type="primary" htmlType="submit" className='bg-black px-8 py-1 text-base   tracking-normal'>
         UPDATE
       </Button>
     </Form.Item>

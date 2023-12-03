@@ -1,8 +1,24 @@
 import React from 'react'
+import Profilesidebar from '../../components/profile/Profilesidebar'
 
 const Savedaddress = () => {
+
+  
+
+
   return (
-    <div>Savedaddress</div>
+    <div className='flex py-10 mx-2 lg:mx-5 xl:mx-8'>
+    <div className='hidden md:block'>
+  <Profilesidebar/>
+  
+    </div>
+  <main className='border rounded-sm shadow-md py-4 px-10 mx-auto'>
+      <h1 className='text-xl font-medium'>Saved Address</h1>
+      <div className='w-[350px] lg:w-[500px] xl:w-[600px]'>
+        
+        </div>
+        </main>
+        </div>
   )
 }
 
