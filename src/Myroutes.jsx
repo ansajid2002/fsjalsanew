@@ -21,6 +21,8 @@ import Payments from './pages/Account/Payments'
 import Notifications from './pages/Account/Notifications'
 import Addaddress from './pages/Account/Addaddress'
 import Savedaddress from './pages/Account/Savedaddress'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 
 const Myroutes = () => {
@@ -51,6 +53,8 @@ const Myroutes = () => {
     <Route path="/notifications" element= {<Notifications/> } />
     <Route path="/addaddress" element={<Addaddress/> } />
     <Route path="/savedaddress" element={<Savedaddress/> } /> 
+    <Route path ="/cart" element={<Cart/>} />
+    <Route path = "/checkout" element={<Checkout/>} />
      {
       categoriesList.map((single,index) => {
 

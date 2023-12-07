@@ -113,11 +113,12 @@ const Header = () => {
                     </div>
                     <div className='flex items-center space-x-3 md:space-x-4'>
                         <BsHeart size={18} className=' hidden md:block' />
-                        <Link to ="/account"> <VscAccount size={18}  /></Link>
-                        <GrNotification size={18} className=' hidden md:block' />
-                        <BsCart size={18} />
+                        <Link to="/account"> <VscAccount size={18} /></Link>
+                        <Link to="/notifications"><GrNotification size={18} className=' hidden md:block' />
+                        </Link>
+                        <Link to="/cart"><BsCart size={18} /></Link>
                         <BsSearch className='block md:hidden' onClick={showModal} />
-                        <Modal title="Search products, categories, ..." open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{ className: ' bg-blue-500' }} cancelButtonProps={{className:'bg-red-500 text-white'}}>
+                        <Modal title="Search products, categories, ..." open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{ className: ' bg-blue-500' }} cancelButtonProps={{ className: 'bg-red-500 text-white' }}>
                             <div className='relative my-4  '>
                                 <Input placeholder="Search here..." className=' ' />
                                 <BsSearch size={16} className='absolute top-2 right-2' />
