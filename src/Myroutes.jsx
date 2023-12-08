@@ -23,6 +23,7 @@ import Addaddress from './pages/Account/Addaddress'
 import Savedaddress from './pages/Account/Savedaddress'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import Wishlist from './pages/Wishlist'
 
 
 const Myroutes = () => {
@@ -48,13 +49,14 @@ const Myroutes = () => {
     <Route path="/signup" element={<Signup/>} />
     <Route path="/new-password" element={<Newpassword/>} />
     <Route path="/account" element={<Account/> } />
-    <Route path="/myorders" elements = {<Myorders/>} />
+    <Route path="/myorders" element = {<Myorders/>} />
     <Route path="/payments" element= {<Payments />} />
     <Route path="/notifications" element= {<Notifications/> } />
     <Route path="/addaddress" element={<Addaddress/> } />
     <Route path="/savedaddress" element={<Savedaddress/> } /> 
     <Route path ="/cart" element={<Cart/>} />
     <Route path = "/checkout" element={<Checkout/>} />
+    <Route path = "/wishlist" element = {<Wishlist/>} />
      {
       categoriesList.map((single,index) => {
 

@@ -275,6 +275,7 @@ const initialState = {
       description: "Pro desc",
       discount: 30,  //in percent
       product_type: "simple",
+      quantity: 1,
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
       ],
@@ -288,6 +289,7 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -302,6 +304,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -316,6 +320,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#ff7701", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -330,6 +336,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -344,6 +352,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -358,6 +368,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -372,6 +384,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -392,6 +406,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -406,6 +422,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
 
       category_id: 102,
@@ -422,6 +440,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -436,6 +456,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -450,6 +472,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -464,6 +488,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -478,6 +504,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -492,6 +520,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -506,6 +536,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -520,6 +552,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -534,6 +568,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -548,6 +584,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -562,6 +600,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
@@ -576,6 +616,8 @@ const initialState = {
       product_name: "Candy Pink Sharara Suit",
       description: "Pro desc",
       discount: 30,  //in percent
+      quantity: 1,
+
       product_type: "simple",
       product_variants: [
         { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },

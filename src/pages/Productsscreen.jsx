@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { BsShareFill } from "react-icons/bs";
 import { FaCartPlus, FaStar } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineHeart, AiFillStar, AiFillHeart } from "react-icons/ai";
 import { Checkbox, Slider } from "antd";
+import { addItem } from "../store/slices/cartSlice";
 
 const Productsscreen = () => {
+  const dispatch = useDispatch()
   const [productsToShow, setproductsToShow] = useState([]);
   const [producttagtoshow, setProducttagtoshow] = useState([])
   const [colorsfilter, setColorsfilter] = useState([])
@@ -146,6 +148,9 @@ const Productsscreen = () => {
     setCurrentPage(pageNumber);
     setTimeout(scrollToTop, 0); // Use setTimeout to ensure smooth scrolling
   };
+
+
+  
   return (
     <div className="flex ">
       {windowWidth >= 664 && (
@@ -282,7 +287,7 @@ const Productsscreen = () => {
                         />
                         <div className="bg-[#eeeeee52] opacity-0 group-hover:opacity-100 absolute top-0 right-0 w-full h-full"></div>
                         <div className="absolute inset-0 flex items-end mb-4 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <button className="text-[14px] font-bold bg-black text-white px-4 py-2 rounded-md shadow-md flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+                          <button onClick={() => dispatch(addItem(single))} className="text-[14px] font-bold bg-black text-white px-4 py-2 rounded-md shadow-md flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
                             <FaCartPlus className="mr-2" />
                             Add To Cart
                           </button>

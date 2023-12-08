@@ -112,10 +112,9 @@ const Header = () => {
                         <BsSearch className='absolute top-2 right-2' />
                     </div>
                     <div className='flex items-center space-x-3 md:space-x-4'>
-                        <BsHeart size={18} className=' hidden md:block' />
+                        <Link to = "/wishlist"><BsHeart size={18} className=' hidden md:block' /></Link>
                         <Link to="/account"> <VscAccount size={18} /></Link>
-                        <Link to="/notifications"><GrNotification size={18} className=' hidden md:block' />
-                        </Link>
+                        <Link to="/notifications"><GrNotification size={18} className=' hidden md:block' /></Link>
                         <Link to="/cart"><BsCart size={18} /></Link>
                         <BsSearch className='block md:hidden' onClick={showModal} />
                         <Modal title="Search products, categories, ..." open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{ className: ' bg-blue-500' }} cancelButtonProps={{ className: 'bg-red-500 text-white' }}>
@@ -155,7 +154,7 @@ const Header = () => {
                             {
                                 categoriesList.slice(0, 10).map((single, index) => {
                                     return (
-                                        <div>
+                                        <div key={index}>
 
                                             <div key={index} className='  '>
                                                 <button className=' text-[12px] lg:text-[14px] xl:text-[17px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
@@ -174,7 +173,7 @@ const Header = () => {
                                         const { category_name, category_image_url } = single
 
                                         return (
-                                            <div>
+                                            <div key={index}>
                                                 <div className='flex items-center justify-center mx-1.5 sm:mx-4 my-2 sm:my-4'>
                                                     <div className='' >
                                                         {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}

@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { BsBoxSeam, BsInstagram, BsTruck, BsTwitter } from 'react-icons/bs';
 import { FaArrowUp, FaChevronDown, FaChevronUp, FaFacebook, FaStar, FaUps } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import { Button, Checkbox, Input, Space } from 'antd';
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-const Productoverview = () => {
+import { addItem } from '../store/slices/cartSlice';
 
+
+const Productoverview = () => {
+  const dispatch = useDispatch()
   const { id } = useParams();
   const { productsList } = useSelector((store) => store.products);
   const { categoriesList } = useSelector((store) => store.categories);
@@ -21,11 +24,11 @@ const Productoverview = () => {
   const currentURL = location.pathname;
   const parts = currentURL.split('/');
   const originalName = decodeURI(parts[1]);
-  console.log(originalName);
-  console.log(id);
-  console.log("selectedcolorvariant");
-  console.log(selectedcolorvariant);
-  console.log("selectedcolorvariant");
+  // console.log(originalName);
+  // console.log(id);
+  // console.log("selectedcolorvariant");
+  // console.log(selectedcolorvariant);
+  // console.log("selectedcolorvariant");
 
   const categoryId = categoriesList.filter((single) => {
     if (single.category_name === originalName) {
@@ -63,9 +66,9 @@ const Productoverview = () => {
 
   const changevariant = (single) => {
 
-    console.log("single");
-    console.log(single);
-    console.log("single");
+    // console.log("single");
+    // console.log(single);
+    // console.log("single");
 
     productToShow.product_variants.map((s) => {
       if (s.color === single) {
@@ -210,7 +213,7 @@ const Productoverview = () => {
        <Slider {...settings2}>
 
          {selectedcolorvariant.images?.map((image, index) => (
-        <div>
+        <div key={index}>
            <div className="aspect-[3/4] mx-4 " >
              <img style={{ width: '100%', height: '100%', objectFit: 'cover'}}
              className='  rounded-lg'
@@ -270,8 +273,8 @@ const Productoverview = () => {
 
               <h1 className="text-lg xl:text-xl font-medium mt-2 xl:mt-3 mb-1">Size</h1>
               <div className="flex items-center space-x-4">
-                {selectedcolorvariant.size?.map((single) => (
-                  <div className="border bg-gray-100 rounded-full w-[30px] xl:w-[35px] h-[30px] xl:h-[35px] flex justify-center items-center">
+                {selectedcolorvariant.size?.map((single,index) => (
+                  <div key={index} className="border bg-gray-100 rounded-full w-[30px] xl:w-[35px] h-[30px] xl:h-[35px] flex justify-center items-center">
                     <h1 className='text-[13px] xl:text-base'>{single}</h1>
                   </div>
                 ))}
@@ -284,9 +287,9 @@ const Productoverview = () => {
             <div>
               <h1 className="text-lg xl:text-xl font-medium mt-2 xl:mt-3 mb-1">Add On's</h1>
               {
-                productToShow.add_ons.map((single) => {
+                productToShow.add_ons.map((single,index) => {
                   return (
-                    <div className="flex">
+                    <div className="flex" key={index}>
                  
                           <Checkbox onChange={onChange}>
                       <h1 className="w-[200px] lg:w-[250px] text-[14px] xl:text-base">{single.title}</h1>
@@ -315,7 +318,13 @@ const Productoverview = () => {
               <AiOutlinePlus size={16} />
             </div>
             <Button className=' bg-blue-500 text-white hover:bg-gray-100'>Buy Now</Button>
-            <Button className=' bg-blue-500 text-white hover:bg-gray-100'>Add To Cart</Button>
+            <Button className=' bg-blue-500 text-white hover:bg-gray-100' 
+            onClick={() => {
+              console.log("CLICKED");
+              dispatch(addItem(productToShow))
+              console.log("CLICKED");
+            }
+            }>Add To Cart</Button>
           </div>
         </div>
         {/* ////////////////////ADD TO WISHLIST?///////////////// */}

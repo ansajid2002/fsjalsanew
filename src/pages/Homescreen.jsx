@@ -13,7 +13,7 @@ const Homescreen = () => {
 
     const {productsList} = useSelector((store) => store.products)
     const {c_symbol} = useSelector((store) => store.selectedCurrency)
-    console.log(c_symbol);
+    // console.log(c_symbol);
 
     const settings = {
         dots: false,
@@ -156,9 +156,9 @@ const Homescreen = () => {
         {
           productsList.map((single) => {
             const { product_variants,product_name } = single
-            console.log("product_variants")
-            console.log(product_variants[0].images[0])
-            console.log("product_variants")
+            // console.log("product_variants")
+            // console.log(product_variants[0].images[0])
+            // console.log("product_variants")
 
             return (
               <div>
@@ -168,7 +168,7 @@ const Homescreen = () => {
                 <div className=' aspect-[3/4]'>
                 <img  src={product_variants[0].images[0]} alt="trendimg" className=' object-cover w-full h-full rounded-lg' />
                 </div>
-                    <h1 className="text-center text-[0.9rem]  md:text-xl font-medium mt-1">{product_name}</h1>
+                    <h1 className="text-center text-[0.9rem]  md:text-xl font-medium mt-1 line-clamp-1">{product_name}</h1>
                 </div>
                 </div>
               </div>
@@ -201,7 +201,7 @@ const Homescreen = () => {
                 </div>
                 <div className='text-center bg-gray-200 py-1'>
 
-                    <h1 className=" text-sm  md:text-lg font-medium ">{product_name}</h1>
+                    <h1 className=" text-sm  md:text-lg font-medium line-clamp-1 ">{product_name}</h1>
                     <h1 className='font-bold text-xl'>
                       upto 65% off
                     </h1>
@@ -229,7 +229,7 @@ const Homescreen = () => {
         {
           productsList.map((single) => {
             const { product_variants,product_name,brand,discount} = single
-            console.log(single.brand)
+            // console.log(single.brand)
 
             return (
               <div>
@@ -249,7 +249,7 @@ const Homescreen = () => {
                     <h1 className=' -mt-0.5 text-lg  text-gray-600 line-through'>{`${c_symbol} ${product_variants[0].price}`}</h1>
                     <h1 className='text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
                     </div>
-                    <h1 className=" text-sm  md:text-lg font-medium line-clamo-1">{product_name}</h1>
+                    <h1 className=" text-sm  md:text-lg font-medium line-clamp-1">{product_name}</h1>
                 </div>
 
                 </div>
@@ -280,7 +280,7 @@ const Homescreen = () => {
         {
           productsList.map((single) => {
             const {product_name,brand,product_variants,discount,rating} = single
-            console.log(single.brand)
+            // console.log(single.brand)
 
             return (
               <div>
@@ -300,7 +300,7 @@ const Homescreen = () => {
                     <h1 className=' -mt-0.5 text-lg text-gray-600 line-through'>{`${c_symbol} ${product_variants[0].price}`}</h1>
                     <h1 className='text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
                     </div>
-                    <h1 className=" text-sm  md:text-lg font-medium line-clamo-1">{product_name}</h1>
+                    <h1 className=" text-sm  md:text-lg font-medium line-clamp-1">{product_name}</h1>
                 </div>
 
                 </div>
