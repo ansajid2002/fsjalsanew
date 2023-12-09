@@ -3,6 +3,56 @@ import Profilesidebar from '../../components/profile/Profilesidebar'
 
 const Savedaddress = () => {
 
+  const addressData = [
+    {
+      firstName: "John",
+      lastName: "Doe",
+      email: "johndoe@example.com",
+      number: "1234567890",
+      apartment: "Apt 123",
+      street: "Main Street",
+      landmark: "Near Park",
+      city: "New York",
+      state: "New York",
+      postalcode: "10001",
+    },
+    {
+      firstName: "Alice",
+      lastName: "Smith",
+      email: "alice.smith@example.com",
+      number: "9876543210",
+      apartment: "Unit 456",
+      street: "Elm Street",
+      landmark: "Corner Store",
+      city: "Los Angeles",
+      state: "California",
+      postalcode: "90001",
+    },
+    {
+      firstName: "Michael",
+      lastName: "Johnson",
+      email: "michaelj@example.com",
+      number: "4561237890",
+      apartment: "Apt 789",
+      street: "Oak Avenue",
+      landmark: "City Hall",
+      city: "Chicago",
+      state: "Illinois",
+      postalcode: "60601",
+    },
+    {
+      firstName: "Sophia",
+      lastName: "Williams",
+      email: "sophiaw@example.com",
+      number: "7894561230",
+      apartment: "Unit 321",
+      street: "Maple Street",
+      landmark: "Central Park",
+      city: "San Francisco",
+      state: "California",
+      postalcode: "94101",
+    },
+  ];
   
 
 

@@ -165,8 +165,8 @@ const Cart = () => {
                       <h1>{totalPrice - .25*totalPrice}</h1>
                     </div>
                     <div className='flex  items-center justify-center'>
-                      <Button className='bg-black hover:bg-[#000000c5] text-white font-medium' >Checkout</Button>
-
+                      <Link to="/checkout"><Button className='bg-black hover:bg-[#000000c5] text-white font-medium' >Checkout</Button>
+</Link>
                     </div>
 
 

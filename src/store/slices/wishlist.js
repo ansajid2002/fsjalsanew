@@ -11,7 +11,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -50,7 +50,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -87,7 +87,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -122,7 +122,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -163,7 +163,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -210,8 +210,9 @@ export const wishlistSlice = createSlice({
         state.wishlistItems.push(newItem);
       },
       removeItemFromWishlist: (state, action) => {
+        console.log(action.payload);
         const itemIdToRemove = action.payload;
-        state.wishlistItems = state.wishlistItems.filter(item => item.id !== itemIdToRemove);
+        state.wishlistItems = state.wishlistItems.filter(item => item.product_id !== itemIdToRemove);
       }
     }
   });

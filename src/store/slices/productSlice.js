@@ -11,7 +11,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -50,7 +50,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -87,7 +87,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -122,7 +122,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -163,7 +163,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -203,7 +203,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -239,7 +239,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
 
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       rating: 4.4,
 
       product_care: "Do not use Bleach, Do not tumble dry",
@@ -282,7 +282,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 4,
@@ -297,7 +297,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
     },
     {
       product_id: 5,
@@ -313,7 +313,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 6,
@@ -329,7 +329,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 7,
@@ -345,7 +345,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 8,
@@ -361,7 +361,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 9,
@@ -377,7 +377,7 @@ const initialState = {
       category_id: 101,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 10,
@@ -399,7 +399,7 @@ const initialState = {
       ],
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
     },
     {
       product_id: 11,
@@ -415,7 +415,7 @@ const initialState = {
       category_id: 102,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 12,
@@ -433,7 +433,7 @@ const initialState = {
       ],
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 13,
@@ -449,7 +449,7 @@ const initialState = {
       category_id: 104,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 14,
@@ -465,7 +465,7 @@ const initialState = {
       category_id: 105,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
     },
     {
       product_id: 15,
@@ -481,7 +481,7 @@ const initialState = {
       category_id: 106,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: true,
     },
     {
       product_id: 16,
@@ -497,7 +497,7 @@ const initialState = {
       category_id: 104,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 17,
@@ -513,7 +513,7 @@ const initialState = {
       category_id: 108,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 18,
@@ -529,7 +529,7 @@ const initialState = {
       category_id: 108,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 19,
@@ -545,7 +545,7 @@ const initialState = {
       category_id: 107,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 20,
@@ -561,7 +561,7 @@ const initialState = {
       category_id: 104,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 21,
@@ -577,7 +577,7 @@ const initialState = {
       category_id: 104,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 22,
@@ -593,7 +593,7 @@ const initialState = {
       category_id: 104,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 23,
@@ -609,7 +609,7 @@ const initialState = {
       category_id: 105,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     },
     {
       product_id: 24,
@@ -625,7 +625,7 @@ const initialState = {
       category_id: 106,
       rating: 4.4,
       brand: "Kalki",
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
     }
   ]
 }

@@ -11,7 +11,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -50,7 +50,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -87,7 +87,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -122,7 +122,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -163,7 +163,7 @@ const initialState = {
       weight: 250,    //in grams
       brand: "Kalki",
       rating: 4.4,
-      reviews: 3456,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
