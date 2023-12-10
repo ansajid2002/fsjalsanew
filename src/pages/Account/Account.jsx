@@ -19,7 +19,7 @@ const Account = () => {
 
       </div>
     <main className='border rounded-sm shadow-md py-4 px-10 mx-auto'>
-        <h1 className='text-xl font-medium'>Add New Address</h1>
+        <h1 className='text-xl font-medium mb-2'>Edit Profile</h1>
         <div className='w-[350px] lg:w-[500px] xl:w-[600px]'>
         <Form
     name="basic"

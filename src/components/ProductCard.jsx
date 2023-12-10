@@ -4,12 +4,28 @@ import { FaCartPlus, FaStar } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { BsShareFill } from "react-icons/bs";
 import { AiOutlineHeart, AiFillStar, AiFillHeart } from "react-icons/ai";
+import {message} from "antd"
 
 const ProductCard = ({ data,url }) => {
     const [inFavourite, setfavorate] = useState(false)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const { c_symbol } = useSelector((store) => store.selectedCurrency);
+    const [messageApi, contextHolder] = message.useMessage();
 
+    const info = () => {
+      messageApi.open({
+        type:"success",
+        content: 'Added To Wishlist',
+          duration: 1,
+      })
+    };
+    const info2 = () => {
+      messageApi.open({
+        type:"success",
+        content: 'Removed From Wishlist',
+          duration: 1,
+      })
+    };
     const {
         product_variants,
         brand,
@@ -22,6 +38,12 @@ const ProductCard = ({ data,url }) => {
     } = data;
 
     const handleWishlist = () => {
+        if(!inFavourite) {
+            info()
+        }
+        else {
+            info2()
+        }
         setfavorate(!inFavourite)
     }
 
@@ -39,8 +61,10 @@ const ProductCard = ({ data,url }) => {
     }, []);
     return (
         <div
-            className=" relative flex items-center justify-center m-3 sm:m-4 lg:m-5 shadow-lg"
+            className=" relative flex items-center justify-center m-1.5 sm:m-2 lg:m-5 shadow-lg"
         >
+                  {contextHolder}
+
             <div className="">
                 <Link to={url} className="relative group">
                     <div className="overflow-hidden">
@@ -51,12 +75,12 @@ const ProductCard = ({ data,url }) => {
                                 className="object-cover w-full h-full rounded-t-sm"
                             />
                             <div className="bg-[#eeeeee52] opacity-0 group-hover:opacity-100 absolute top-0 right-0 w-full h-full"></div>
-                            <div className="absolute inset-0 flex items-end mb-4 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            {/* <div className="absolute inset-0 flex items-end mb-4 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button onClick={() => dispatch(addItem(single))} className="text-[14px] font-bold bg-black text-white px-4 py-2 rounded-md shadow-md flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
                                     <FaCartPlus className="mr-2" />
                                     Add To Cart
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className=" bg-[#f1eeee] p-2">
@@ -67,14 +91,14 @@ const ProductCard = ({ data,url }) => {
                             {product_name}
                         </h1>
                         <div className="flex items-center  space-x-2">
-                            <h1 className=" text-base lg:text-lg font-bold">{`${c_symbol} ${product_variants[0].price - product_variants[0].price * (discount / 100)
+                            <h1 className=" text-[12px] md:text-base lg:text-lg font-bold">{`${c_symbol} ${product_variants[0].price - product_variants[0].price * (discount / 100)
                                 }`}</h1>
-                            <h1 className="  text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${product_variants[0].price}`}</h1>
-                            <h1 className="text-[14px] lg:text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
+                            <h1 className=" text-[12px]  md:text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${product_variants[0].price}`}</h1>
+                            <h1 className="text-[12px] lg:text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
                         </div>
                         <div className="flex justify-between items-center mt-1.5">
-                            <div className="flex space-x-4">
-                                <div className="flex items-center space-x-1 bg-[#0000ff] px-1.5 py-0 md:py-1 rounded-xl ">
+                            <div className="flex items-center space-x-2 md:space-x-4">
+                                <div className="flex items-center space-x-1 bg-[#0000ff] px-1 md:px-1.5 py-0 md:py-1 rounded-xl ">
                                     <FaStar
                                         color="white"
                                         size={windowWidth > 992 ? 16 : 14}
@@ -83,7 +107,7 @@ const ProductCard = ({ data,url }) => {
                                         {rating}
                                     </h1>
                                 </div>
-                                <h1 className="flex  items-center sm:text-[12px] lg:text-[15px]">{`${reviews} reviews`}</h1>
+                                <h1 className="flex  items-center text-[10px] sm:text-[12px] lg:text-[15px]">{`${reviews} reviews`}</h1>
                             </div>
                             <BsShareFill
                                 color="blue"

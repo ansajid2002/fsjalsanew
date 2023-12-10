@@ -2,35 +2,59 @@ import React, { useState } from 'react'
 import { AiFillHeart, AiOutlineShoppingCart } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import { RxCross1, RxCross2 } from "react-icons/rx";
-
+import {message} from "antd"
 const Wishlist = () => {
   // const {wishlistData} = useSelector((store) => store.wishlist);
-
+  const [messageApi, contextHolder] = message.useMessage();
 const { productsList } = useSelector((store) => store.products);
 const [wishlistData, setWishlistData] = useState(
   productsList.filter((single) => single.inFavourite === true)
 );
+const info3 = () => {
+  messageApi.open({
+    type:"success",
+    content: 'Added To Wishlist',
+      duration: 1,
+  })
+};
+const info2 = () => {
+  console.log("removerd");
+  messageApi.open({
+    type:"success",
+    content: 'Removed From Wishlist',
+      duration: 1,
+  })
+};
 
-const toggleFavourite = (product_id) => {
+const toggleFavourite = (product_id,inFavourite) => {
+  if(!inFavourite) {
+    info3()
+}
+else {
+    info2()
+}
   setWishlistData((prev) => {
     const updatedData = prev.filter((item) => item.product_id !== product_id);
     return updatedData;
   });
 };
+
+
   
 const WishlistItem = ({ data }) => {
-    const { product_name, quantity, product_id, brand, discount } = data
+    const { product_name, quantity, product_id, brand, discount,inFavourite } = data
     const { price, images } = data.product_variants[0]
 
     return (
       <div className='my-4 mx-2 aspect-[3/4] w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px]   rounded-sm'>
+
         <div className="aspect-[3/4] w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] relative rounded-sm overflow-hidden ">
           <img
             src={images[0]}
             alt="trendimg"
             className="object-cover w-full h-full "
           />
-          <div onClick={() => toggleFavourite(product_id) } className='absolute top-0 right-0 bg-gray-300 p-1 rounded-sm cursor-pointer hover:bg-gray-400'><AiFillHeart
+          <div onClick={() => toggleFavourite(product_id,inFavourite) } className='absolute top-0 right-0 bg-gray-300 p-1 rounded-sm cursor-pointer hover:bg-gray-400'><AiFillHeart
                             size={22}
                             color="blue"
                             className=""
@@ -54,6 +78,8 @@ const WishlistItem = ({ data }) => {
 
   return (
     <div>
+                    {contextHolder}
+
       <div className='flex items-center justify-between mx-10 mt-6 mb-10 '>
         <h1 className='text-2xl font-medium'>{`Wishlist (${wishlistData.length})`}</h1>
         <div className='flex items-center mt-1 cursor-pointer border hover:bg-red-700 bg-red-500 px-4 py-1.5 rounded-md' >

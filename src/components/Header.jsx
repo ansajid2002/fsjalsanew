@@ -152,7 +152,7 @@ const Header = () => {
                     windowWidth > 768 ?
                         <div className='flex items-center justify-between mx-[12%] mb-2' >
                             {
-                                categoriesList.slice(0, 10).map((single, index) => {
+                                categoriesList.slice(0, 9).map((single, index) => {
                                     return (
                                         <div key={index}>
 
@@ -169,7 +169,7 @@ const Header = () => {
 
                             <Slider {...settings}>
                                 {
-                                    categoriesList.slice(0, 10).map((single, index) => {
+                                    categoriesList.slice(0, 9).map((single, index) => {
                                         const { category_name, category_image_url } = single
 
                                         return (

@@ -4,12 +4,12 @@ const initialState = {
    wishlistData : [
     {
       product_id: 1,
-      product_name: "Candy Pink Sharara Suit",
+      product_name:"Korams Design Black Kanjivaram",
       description: "Pro desc",
       discount: 40,  //in percent
       quantity: 1,
       weight: 250,    //in grams
-      brand: "Kalki",
+      brand: "Fs Jalsa",
       rating: 4.4,
       reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
@@ -23,9 +23,9 @@ const initialState = {
       product_type: "variant",
       currency_symbol: "INR",
       product_variants: [
-        { color: "#ff7701", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L"] },
-        { color: "#000000", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["M", "XL"] },
+        { color: "#ff7701", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L", "XL", "XXL"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L"] },
+        { color: "#000000", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["M", "XL"] },
       ],
       product_tag: [
         { fabric: ["Cotton", "Polyester", "Crepe", "Chiffon", "Lace", "Silk"] },
@@ -43,14 +43,14 @@ const initialState = {
     },
     {
       product_id: 122,
-      product_name: "Candy Pink Sharara Suit",
+      product_name:"Korams Design Black Kanjivaram",
       description: "Pro desc",
       discount: 10,  //in percent
       quantity: 3,
       weight: 250,    //in grams
-      brand: "Kalki",
+      brand: "Fs Jalsa",
       rating: 4.4,
-      reviews: 3456,inFavourite: true,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -61,7 +61,7 @@ const initialState = {
   
       product_type: "simple",
       product_variants: [
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L", "XL", "XXL"] },
       ],
       product_tag: [
         { names: ["sajid", "shadab", "danish"] },
@@ -80,14 +80,14 @@ const initialState = {
     },
     {
       product_id: 123,
-      product_name: "Candy Pink Sharara Suit",
+      product_name:"Korams Design Black Kanjivaram",
       description: "Pro desc",
       discount: 23,  //in percent
       quantity: 1,
       weight: 250,    //in grams
-      brand: "Kalki",
+      brand: "Fs Jalsa",
       rating: 4.4,
-      reviews: 3456,inFavourite: true,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -100,9 +100,9 @@ const initialState = {
   
   
       product_variants: [
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L"] },
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["M", "XL"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L", "XL", "XXL"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["M", "XL"] },
       ],
       category_id: 101,
       subcategory_id: 1001,
@@ -115,14 +115,14 @@ const initialState = {
     },
     {
       product_id: 1245,
-      product_name: "Candy Pink Sharara Suit",
+      product_name:"Korams Design Black Kanjivaram",
       description: "Pro desc",
       discount: 30,  //in percent
       quantity: 1,
       weight: 250,    //in grams
-      brand: "Kalki",
+      brand: "Fs Jalsa",
       rating: 4.4,
-      reviews: 3456,inFavourite: true,
+      reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
       shipping_fee:
         { Local: 200, Zonal: 400, International: 600 }
@@ -141,9 +141,9 @@ const initialState = {
   
   
       product_variants: [
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L"] },
-        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["M", "XL"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L", "XL", "XXL"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L"] },
+        { color: "#00008b", images: ["/images/productimages/boys1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["M", "XL"] },
       ],
       category_id: 101,
       subcategory_id: 1001,
@@ -161,7 +161,7 @@ const initialState = {
       discount: 30,  //in percent
       quantity: 2,
       weight: 250,    //in grams
-      brand: "Kalki",
+      brand: "Fs Jalsa",
       rating: 4.4,
       reviews: 3456,inFavourite: false,
       product_care: "Do not use Bleach, Do not tumble dry",
@@ -180,7 +180,7 @@ const initialState = {
       product_type: "variant",
   
       product_variants: [
-        { color: "#ff0000", images: ["/images/productimages/men1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg", "/images/productimages/men1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg", "/images/productimages/men1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1000, size: ["S", "M", "L", "XL", "XXL"] },
+        { color: "#ff0000", images: ["/images/productimages/men1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg", "/images/productimages/men1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg", "/images/productimages/men1.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 1200, size: ["S", "M", "L", "XL", "XXL"] },
         { color: "#ff7701", images: ["/images/productimages/boys3.jpg", "/images/productimages/boys1.jpg", "/images/productimages/boys2.jpg"], price: 2000, size: ["S", "M", "L"] },
         { color: "#000000", images: ["/images/productimages/men2.jpg", "/images/productimages/boys2.jpg"], price: 4000, size: ["M", "XL"] },
       ],

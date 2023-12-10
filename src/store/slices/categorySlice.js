@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   categoriesList: [
     {
-    "category_id": 101,
-    "category_name": "Salwar Kameez",
+    "category_id": 1,
+    "category_name": "Sarees",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 
@@ -14,7 +14,7 @@ const initialState = {
     "category_type": "Services"
     },
     {
-    "category_id": 102,
+    "category_id": 2,
     "category_name": "Kurtis",
     "category_description": " ",
     "category_image_url": "https://www.svgrepo.com/show/520749/girl-dress.svg",
@@ -24,8 +24,8 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 103,
-    "category_name": "Mens",
+    "category_id": 3,
+    "category_name": "Mens Clothing",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 
@@ -35,8 +35,8 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 104,
-    "category_name": "Blouses",
+    "category_id": 4,
+    "category_name": "Kids Fashion",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 
@@ -46,8 +46,8 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 105,
-    "category_name": "Wedding",
+    "category_id": 5,
+    "category_name": "Abaya",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 
@@ -57,8 +57,8 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 106,
-    "category_name": "Unstitched",
+    "category_id": 6,
+    "category_name": "Lehengas",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 
@@ -68,8 +68,8 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 107,
-    "category_name": "Kids",
+    "category_id": 7,
+    "category_name": "Salwar Kameez",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 
@@ -79,7 +79,7 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 108,
+    "category_id": 8,
     "category_name": "Home & Living",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
@@ -90,8 +90,8 @@ const initialState = {
     "category_type": "Products"
     },
     {
-    "category_id": 109,
-    "category_name": "Formal",
+    "category_id": 9,
+    "category_name": "Jewellery",
     "category_description": " ",
     "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
 

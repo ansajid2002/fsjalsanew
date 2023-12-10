@@ -52,12 +52,12 @@ const Myroutes = () => {
     <Route path="/myorders" element = {<Myorders/>} />
     <Route path="/payments" element= {<Payments />} />
     <Route path="/notifications" element= {<Notifications/> } />
-    {/* <Route path="/addaddress" element={<Addaddress/> } />
-    <Route path="/savedaddress" element={<Savedaddress/> } />  */}
+    <Route path="/addaddress" element={<Addaddress/> } />
+    <Route path="/savedaddress" element={<Savedaddress/> } /> 
 
 
-    <Route path="/savedaddress" element={<Addaddress/> } />
-    <Route path="/addaddress" element={<Savedaddress/> } /> 
+    {/* <Route path="/savedaddress" element={<Addaddress/> } />
+    <Route path="/addaddress" element={<Savedaddress/> } />  */}
     <Route path ="/cart" element={<Cart/>} />
     <Route path = "/checkout" element={<Checkout/>} />
     <Route path = "/wishlist" element = {<Wishlist/>} />

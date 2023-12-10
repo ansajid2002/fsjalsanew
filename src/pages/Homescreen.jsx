@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 import img1 from "/images/advertisement/advertisement1.jpg"
 import img2 from "/images/advertisement/advertisement2.jpg"
 import img3 from "/images/advertisement/advertisement3.jpg"
+import { Link } from 'react-router-dom';
 
 
 const Homescreen = () => {
@@ -102,13 +103,13 @@ const Homescreen = () => {
         },
         {
           id: 2,
-          img: "./images/homeslider1.png",
+          img: "./images/homeslider2.png",
           title: "Eid Ready To Wear",
           subtitle: "ORDER NOW TO GET YOUR OUTFITS BEFORE EID"
         },
         {
           id: 3,
-          img: "./images/homeslider1.png",
+          img: "./images/homeslider3.png",
           title: "Eid Ready To Wear",
           subtitle: "ORDER NOW TO GET YOUR OUTFITS BEFORE EID",
           cover: "cover"
@@ -133,7 +134,7 @@ const Homescreen = () => {
                 const { id, img, title, subtitle, cover } = single;
                 return (
                     <div className='relative h-full cursor-pointer'>
-                        <img className="w-full h-[550px] object-cover" src={img} alt="sa" />
+                        <img className="w-full h-[250px] md:h-[550px] object-cover" src={img} alt="sa" />
                             <div className="bg-[#00000068] w-full h-full absolute top-0"></div>
                      
                           
@@ -147,28 +148,27 @@ const Homescreen = () => {
 
 {/* //////////////////Shop By Trend/////////////////////////////////// */}
  
-    <div className='flex items-center justify-between mx-10 my-4 mt-10'>
-        <h1 className='text-2xl font-semibold tracking-wide'>Trending Categories</h1>
-        <button className='text-xl bg-black text-white rounded-md py-2 px-4'>View All</button>
+    <div className='flex items-center justify-between mx-4 md:mx-10 my-4 mt-10'>
+        <h1 className='text-base md:text-2xl font-semibold tracking-wide'>Trending Categories</h1>
+        <Link to="/Kurtis">
+        <button className='text-[14px] md:text-xl bg-black text-white rounded-md py-1 md:py-2 px-2 md:px-4'>View All</button>
+        </Link>
         </div>
         <div className='mx-2 md:mx-4'>
         <Slider {...settings}>
         {
-          productsList.map((single) => {
+           [...productsList].sort(() => Math.random() - 0.5).slice(0, 12).map((single) => {
             const { product_variants,product_name } = single
-            // console.log("product_variants")
-            // console.log(product_variants[0].images[0])
-            // console.log("product_variants")
 
             return (
               <div>
-              <div className='flex items-center justify-center mx-4'>
+              <div className='flex items-center justify-center mx-1 md:mx-4'>
               <div className='' >
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
                 <img  src={product_variants[0].images[0]} alt="trendimg" className=' object-cover w-full h-full rounded-lg' />
                 </div>
-                    <h1 className="text-center text-[0.9rem]  md:text-xl font-medium mt-1 line-clamp-1">{product_name}</h1>
+                    <h1 className="text-center text-sm  md:text-xl font-medium mt-1 line-clamp-1">{product_name}</h1>
                 </div>
                 </div>
               </div>
@@ -181,9 +181,11 @@ const Homescreen = () => {
    
      {/* //////////////////Shop By Trend/////////////////////////////////// */}
   <div>
-    <div className='flex items-center justify-between mx-10 my-4 mt-10'>
-        <h1 className='text-2xl font-semibold tracking-wide'>Top Deals of the Day</h1>
-        <button className='text-xl bg-black text-white rounded-md py-2 px-4'>View All</button>
+  <div className='flex items-center justify-between mx-4 md:mx-10 my-4 mt-10'>
+        <h1 className='text-base md:text-2xl font-semibold tracking-wide'>Top Deals Of The Day</h1>
+        <Link to="/Sarees">
+        <button className='text-[14px] md:text-xl bg-black text-white rounded-md py-1 md:py-2 px-2 md:px-4'>View All</button>
+        </Link>
         </div>
         <div className='mx-2 md:mx-4'>
         <Slider {...settings2}>
@@ -193,7 +195,7 @@ const Homescreen = () => {
 
             return (
               <div>
-              <div className='flex items-center justify-center mx-4'>
+              <div className='flex items-center justify-center mx-1 md:mx-4'>
               <div className='' >
               
                 <div className=' aspect-[3/4]'>
@@ -202,7 +204,7 @@ const Homescreen = () => {
                 <div className='text-center bg-gray-200 py-1'>
 
                     <h1 className=" text-sm  md:text-lg font-medium line-clamp-1 ">{product_name}</h1>
-                    <h1 className='font-bold text-xl'>
+                    <h1 className='font-semibold text-base md:text-xl'>
                       upto 65% off
                     </h1>
                 </div>
@@ -220,20 +222,22 @@ const Homescreen = () => {
 
     {/* //////////////////Shop By Trend/////////////////////////////////// */}
   <div>
-    <div className='flex items-center justify-between mx-10 my-4 mt-10 '>
-        <h1 className='text-2xl font-semibold tracking-wide'>Recommended For You</h1>
-        <button className='text-xl bg-black text-white rounded-md py-2 px-4'>View All</button>
+  <div className='flex items-center justify-between mx-4 md:mx-10 my-4 mt-10'>
+        <h1 className='text-base md:text-2xl font-semibold tracking-wide'>Recommended For You</h1>
+        <Link to="Lehengas">
+        <button className='text-[14px] md:text-xl bg-black text-white rounded-md py-1 md:py-2 px-2 md:px-4'>View All</button>
+        </Link>
         </div>
         <div className='mx-2 md:mx-4'>
         <Slider {...settings}>
         {
-          productsList.map((single) => {
+         [...productsList].sort(() => Math.random() - 0.5).slice(0, 12).map((single) => {
             const { product_variants,product_name,brand,discount} = single
             // console.log(single.brand)
 
             return (
               <div>
-              <div className='flex items-center justify-center mx-4'>
+              <div className='flex items-center justify-center mx-1 md:mx-4'>
               <div className='' >
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
@@ -241,14 +245,15 @@ const Homescreen = () => {
                 </div>
                 <div className='text-center bg-gray-200 py-1'>
 
-                    <h1 className='font-bold text-xl'>
+                    <h1 className='font-semibold text-base md:text-xl'>
                       {brand}
                     </h1>
-                    <div className='flex items-center justify-center space-x-2'>
-                    <h1 className='text-xl font-bold'>{`${c_symbol} ${product_variants[0].price - product_variants[0].price*(discount/100)}`}</h1>
-                    <h1 className=' -mt-0.5 text-lg  text-gray-600 line-through'>{`${c_symbol} ${product_variants[0].price}`}</h1>
-                    <h1 className='text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
-                    </div>
+                    <div className="flex items-center justify-center space-x-2">
+                            <h1 className=" text-[12px] md:text-base lg:text-lg font-bold">{`${c_symbol} ${product_variants[0].price - product_variants[0].price * (discount / 100)
+                                }`}</h1>
+                            <h1 className=" text-[12px]  md:text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${product_variants[0].price}`}</h1>
+                            <h1 className="text-[12px] lg:text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
+                        </div>
                     <h1 className=" text-sm  md:text-lg font-medium line-clamp-1">{product_name}</h1>
                 </div>
 
@@ -265,26 +270,28 @@ const Homescreen = () => {
 
 
 {/* /////////////////////////////NEW ARRIVAL ///////////////////////////////// */}
-<div className='flex items-center justify-between mx-10 my-4 mt-10 '>
+{/* <div className='flex items-center justify-between mx-10 my-4 mt-10 '>
         <h1 className='text-2xl font-semibold tracking-wide'>New Arrival</h1>
-</div>
+</div> */}
 
     {/* //////////////////Shop By Trend/////////////////////////////////// */}
   <div>
-    <div className='flex items-center justify-between mx-10 my-4  mt-10'>
-        <h1 className='text-2xl font-semibold tracking-wide'>Best Sellers</h1>
-        <button className='text-xl bg-black text-white rounded-md py-2 px-4'>View All</button>
+  <div className='flex items-center justify-between mx-4 md:mx-10 my-4 mt-10'>
+        <h1 className='text-base md:text-2xl font-semibold tracking-wide'>Best Seller</h1>
+        <Link to="Lehengas">
+        <button className='text-[14px] md:text-xl bg-black text-white rounded-md py-1 md:py-2 px-2 md:px-4'>View All</button>
+        </Link>
         </div>
         <div className='mx-2 md:mx-4'>
         <Slider {...settings}>
         {
-          productsList.map((single) => {
+           [...productsList].sort(() => Math.random() - 0.5).slice(0, 12).map((single) => {
             const {product_name,brand,product_variants,discount,rating} = single
             // console.log(single.brand)
 
             return (
               <div>
-              <div className='flex items-center justify-center mx-4'>
+              <div className='flex items-center justify-center mx-1 md:mx-4'>
               <div className='' >
                 {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                 <div className=' aspect-[3/4]'>
@@ -292,14 +299,15 @@ const Homescreen = () => {
                 </div>
                 <div className='text-center bg-gray-200 py-1'>
 
-                    <h1 className='font-bold text-xl'>
+                    <h1 className='font-semibold text-base md:text-xl'>
                       {brand}
                     </h1>
-                    <div className='flex items-center justify-center space-x-2'>
-                    <h1 className='text-xl font-bold'>{`${c_symbol} ${product_variants[0].price - product_variants[0].price*(discount/100)}`}</h1>
-                    <h1 className=' -mt-0.5 text-lg text-gray-600 line-through'>{`${c_symbol} ${product_variants[0].price}`}</h1>
-                    <h1 className='text-base text-[#00008b] font-medium'>{`(${discount}%)`}</h1>
-                    </div>
+                    <div className="flex items-center justify-center space-x-2">
+                            <h1 className=" text-[12px] md:text-base lg:text-lg font-bold">{`${c_symbol} ${product_variants[0].price - product_variants[0].price * (discount / 100)
+                                }`}</h1>
+                            <h1 className=" text-[12px]  md:text-base lg:text-base text-gray-600 line-through">{`${c_symbol} ${product_variants[0].price}`}</h1>
+                            <h1 className="text-[12px] lg:text-base text-[#00008b] font-medium">{`(${discount}%)`}</h1>
+                        </div>
                     <h1 className=" text-sm  md:text-lg font-medium line-clamp-1">{product_name}</h1>
                 </div>
 
@@ -333,9 +341,9 @@ const Homescreen = () => {
           </div> 
           
         <div  style={{width:"30%",height:"100%",marginTop:"auto",marginBottom:"auto"}}>
-          <h1  className="text-base lg:text-3xl">Handbags, Footwear & Jewellery</h1>
-          <h3 className='font-semibold text-base my-1'>UPTO 70% OFF</h3>
-          <button className=' font-bold bg-black text-white py-1.5 px-3 rounded-xl mt-2 hover:bg-gray-400 hover:text-black'>SHOP NOW</button>
+          <h1  className="text-sm lg:text-3xl">Handbags, Footwear & Jewellery</h1>
+          <h3 className='font-semibold text-sm my-1'>UPTO 70% OFF</h3>
+          <button className=' text-[10px] md:text-xl font-bold bg-black text-white py-1.5 px-2 md:px-3 rounded-xl mt-2 hover:bg-gray-400 hover:text-black'>SHOP NOW</button>
         </div>
     </div>
 
