@@ -24,6 +24,7 @@ import Savedaddress from './pages/Account/Savedaddress'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Wishlist from './pages/Wishlist'
+import Mobileaccount from './pages/Account/Mobileaccount'
 
 
 const Myroutes = () => {
@@ -49,6 +50,7 @@ const Myroutes = () => {
     <Route path="/signup" element={<Signup/>} />
     <Route path="/new-password" element={<Newpassword/>} />
     <Route path="/account" element={<Account/> } />
+    <Route path="/mobileaccount" element={<Mobileaccount/>} />
     <Route path="/myorders" element = {<Myorders/>} />
     <Route path="/payments" element= {<Payments />} />
     <Route path="/notifications" element= {<Notifications/> } />

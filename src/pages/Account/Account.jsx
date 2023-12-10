@@ -18,9 +18,9 @@ const Account = () => {
     <Profilesidebar/>
 
       </div>
-    <main className='border rounded-sm shadow-md py-4 px-10 mx-auto'>
+    <main className='border rounded-sm shadow-md py-4 px-2 md:px-10 mx-auto'>
         <h1 className='text-xl font-medium mb-2'>Edit Profile</h1>
-        <div className='w-[350px] lg:w-[500px] xl:w-[600px]'>
+        <div className='w-[300px] lg:w-[500px] xl:w-[600px]'>
         <Form
     name="basic"
     labelCol={{
@@ -82,28 +82,14 @@ const Account = () => {
         <DatePicker />
       </Form.Item>
 
-    
 
-    <Form.Item
-      name="remember"
-      valuePropName="checked"
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
-    >
-    </Form.Item>
+  <div className='flex justify-center items-center'>
 
-    <Form.Item
-      wrapperCol={{
-        offset: 8,
-        // span: 30,
-      }}
-    >
-      <Button type="primary" htmlType="submit" className='bg-black px-8 py-1 text-base   tracking-normal'>
+      <button  className='bg-black text-white rounded-md  px-8 py-1 text-base   tracking-normal'>
         UPDATE
-      </Button>
-    </Form.Item>
+      </button>
+  </div>
+ 
   </Form>
         </div>
     </main>

@@ -6,7 +6,7 @@ const initialState = {
     "category_id": 1,
     "category_name": "Sarees",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/saree.png",
 
     "category_status": true,
     "created_at": "2023-09-13T07:22:46.378Z",
@@ -17,7 +17,7 @@ const initialState = {
     "category_id": 2,
     "category_name": "Kurtis",
     "category_description": " ",
-    "category_image_url": "https://www.svgrepo.com/show/520749/girl-dress.svg",
+    "category_image_url": "/all/kurtis.png",
     "category_status": true,
     "created_at": "2023-09-01T05:34:35.277Z",
     "updated_at": "2023-09-01T05:34:35.277Z",
@@ -27,7 +27,7 @@ const initialState = {
     "category_id": 3,
     "category_name": "Mens Clothing",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/men.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:34:31.390Z",
@@ -38,7 +38,7 @@ const initialState = {
     "category_id": 4,
     "category_name": "Kids Fashion",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/kids.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:34:43.165Z",
@@ -49,7 +49,7 @@ const initialState = {
     "category_id": 5,
     "category_name": "Abaya",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/abaya.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:34:57.867Z",
@@ -60,7 +60,7 @@ const initialState = {
     "category_id": 6,
     "category_name": "Lehengas",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/henga.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:35:13.289Z",
@@ -71,7 +71,7 @@ const initialState = {
     "category_id": 7,
     "category_name": "Salwar Kameez",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/salwaarkameez.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:35:27.274Z",
@@ -82,7 +82,7 @@ const initialState = {
     "category_id": 8,
     "category_name": "Home & Living",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/home.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:35:39.240Z",
@@ -93,7 +93,7 @@ const initialState = {
     "category_id": 9,
     "category_name": "Jewellery",
     "category_description": " ",
-    "category_image_url": " https://www.svgrepo.com/show/157325/women-clothing.svg",
+    "category_image_url": "/all/jewellery.png",
 
     "category_status": true,
     "created_at": "2023-09-13T09:35:51.731Z",

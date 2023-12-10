@@ -113,9 +113,9 @@ const Header = () => {
                     </div>
                     <div className='flex items-center space-x-3 md:space-x-4'>
                         <Link to = "/wishlist"><BsHeart size={18} className=' hidden md:block' /></Link>
-                        <Link to="/account"> <VscAccount size={18} /></Link>
+                        <Link to={windowWidth > 768 ? "/account" : "/mobileaccount"}> <VscAccount size={18} /></Link>
                         <Link to="/notifications"><GrNotification size={18} className=' hidden md:block' /></Link>
-                        <Link to="/cart"><BsCart size={18} /></Link>
+                        <Link to="/cart" className=''><BsCart size={18} /></Link>
                         <BsSearch className='block md:hidden' onClick={showModal} />
                         <Modal title="Search products, categories, ..." open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{ className: ' bg-blue-500' }} cancelButtonProps={{ className: 'bg-red-500 text-white' }}>
                             <div className='relative my-4  '>
@@ -131,10 +131,10 @@ const Header = () => {
                     <div className='text-white'>
                         <div className=' ' >
                             {
-                                categoriesList.map((single, index) => {
+                                categoriesList.slice(0,9).map((single, index) => {
                                     return (
                                         <div key={index} className=' mb-3.5 '>
-                                            <button className=' text-[15px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
+                                            <button onClick={() =>setOpen(false)} className=' text-[15px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
                                         </div>
 
                                     )
@@ -142,7 +142,9 @@ const Header = () => {
                             }
                         </div>
                         <div className='border-t pt-4'>
+                            <Link to="/login">
                             <button className='font-medium text-lg bg-gray-100 px-2 py-1 pt-0.5 rounded-md text-black'>Sign In</button>
+                            </Link>
                         </div>
                     </div>
                 </Drawer>
@@ -157,7 +159,7 @@ const Header = () => {
                                         <div key={index}>
 
                                             <div key={index} className='  '>
-                                                <button className=' text-[12px] lg:text-[14px] xl:text-[17px] font-normal'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
+                                                <button className=' text-[12px] lg:text-[14px] xl:text-[17px] hover:text-gray-500 font-semibold'><Link to={`/${single.category_name}`}>{single.category_name}</Link></button>
                                             </div>
 
                                         </div>
@@ -174,15 +176,17 @@ const Header = () => {
 
                                         return (
                                             <div key={index}>
+                                                <Link to={`/${category_name}`}>
                                                 <div className='flex items-center justify-center mx-1.5 sm:mx-4 my-2 sm:my-4'>
                                                     <div className='' >
                                                         {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
-                                                        <div className=' aspect-[4/4] border rounded-full p-3  '>
-                                                            <img src={category_image_url} alt="trendimg" className=' object-cover w-full h-full rounded-lg' />
+                                                        <div className=' aspect-[4/4] border rounded-full   '>
+                                                            <img src={category_image_url} alt="trendimg" className=' rounded-full object-cover w-full h-full ' />
                                                         </div>
                                                         <h1 className="text-center text-[11px] sm:text-[13px] md:text-xl font-medium mt-0.5 md:mt-1">{category_name}</h1>
                                                     </div>
                                                 </div>
+                                                </Link>
                                             </div>
 
                                         )

@@ -378,13 +378,13 @@ const Productoverview = () => {
                 {
                     Favourite ?
                         <AiFillHeart
-                            size={windowWidth > 992 ? 25 : 16}
+                            size={windowWidth > 992 ? 25 : 22}
                             color="#167bdf"
                             className=""
                         />
                         :
                         <AiOutlineHeart
-                            size={windowWidth > 992 ? 25 : 16}
+                            size={windowWidth > 992 ? 25 : 22}
                             color="#167bdf"
                             className=""
                         />}

@@ -18,7 +18,7 @@ const Profilesidebar = () => {
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
                         <img src={profile} alt="edit-profile" className='w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] rounded-md' />
-                        <Link to="/account"><h2 className='text-base lg:text-[18px] ml-3 hover:text-gray-100'>Edit Profile</h2></Link>
+                        <Link to="/account"><h2 className='text-base lg:text-[18px] ml-3 hover:text-gray-500 font-semibold'>Edit Profile</h2></Link>
                     </div>
                     <IoIosArrowForward size={20} color='gray' />
                 </div>
@@ -27,7 +27,7 @@ const Profilesidebar = () => {
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
                         <img src={myorders} alt="edit-profile" className='w-[25px] h-[25px] lg:w-[30px] lg:h-[30px]rounded-md' />
-                        <Link to="/myorders"><h2 className='text-base lg:text-[18px] ml-3'>My Order</h2></Link>
+                        <Link to="/myorders"><h2 className='text-base lg:text-[18px] ml-3 hover:text-gray-500 font-semibold'>My Order</h2></Link>
                     </div>
                     <IoIosArrowForward  size={20} color='gray' />
                 </div>
@@ -36,7 +36,7 @@ const Profilesidebar = () => {
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
                         <img src={payments} alt="edit-profile" className='w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] rounded-md' />
-                        <Link to="/payments"><h2 className='text-base lg:text-[18px] ml-3'>Payments</h2></Link>
+                        <Link to="/payments"><h2 className='text-base lg:text-[18px] ml-3 hover:text-gray-500 font-semibold'>Payments</h2></Link>
                     </div>
                     <IoIosArrowForward  size={20} color='gray' />
                 </div>
@@ -45,7 +45,7 @@ const Profilesidebar = () => {
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
                         <img src={notification} alt="edit-profile" className='w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] rounded-md' />
-                        <Link to="/notifications"><h2 className='text-base lg:text-[18px] ml-3'>Notification</h2></Link>
+                        <Link to="/notifications"><h2 className='text-base lg:text-[18px] ml-3 hover:text-gray-500 font-semibold'>Notification</h2></Link>
                     </div>
                     <IoIosArrowForward  size={20} color='gray' />
                 </div>
@@ -54,7 +54,7 @@ const Profilesidebar = () => {
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
                         <img src={address} alt="edit-profile" className='w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] rounded-md' />
-                        <Link to="/savedaddress"><h2 className='text-base lg:text-[18px] ml-3'>Address</h2></Link>
+                        <Link to="/savedaddress"><h2 className='text-base lg:text-[18px] ml-3 hover:text-gray-500 font-semibold'>Address</h2></Link>
                     </div>
                     <IoIosArrowForward color='gray'/>
                 </div>

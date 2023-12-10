@@ -17,9 +17,9 @@ const Addaddress = () => {
   <Profilesidebar/>
   
     </div>
-  <main className='border rounded-sm shadow-md py-4 px-10 mx-auto'>
+  <main className='border rounded-sm shadow-md py-4 px-2 md:px-10 mx-auto'>
       <h1 className='text-xl font-medium'>Add New Address</h1>
-      <div className='w-[350px] lg:w-[500px] xl:w-[600px]'>
+      <div className='w-[300px] lg:w-[500px] xl:w-[600px]'>
      
       <Form
             className='my-6 '

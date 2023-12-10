@@ -93,13 +93,13 @@ const Savedaddress = () => {
 
   return (
     <div className='flex py-10 mx-2 lg:mx-5 xl:mx-8'>
-      <div className='hidden md:block'>
-        <Profilesidebar />
-
-      </div>
-      <main className='border border-gray-400 rounded-sm shadow-md py-4 px-2 sm:px-10 mx-auto'>
+    <div className='hidden md:block'>
+  <Profilesidebar/>
+  
+    </div>
+  <main className='border rounded-sm shadow-md py-4 px-2 md:px-10 mx-auto'>
         <h1 className='text-xl font-medium'>Saved Address</h1>
-        <div className='w-full sm:w-[350px] lg:w-[500px] xl:w-[700px]'>
+        <div className='w-full sm:w-[300px] lg:w-[500px] xl:w-[700px]'>
           <div className='grid lg:grid-cols-2 m-2 sm:m-4'>
           {
             addressData.map((single) => {
@@ -111,10 +111,10 @@ const Savedaddress = () => {
             </div>
             <div className='space-y-4 mb-6'>
             <div className='flex items-center justify-center '>
-            <button className='bg-black text-white px-2 py-1.5 rounded-md text-lg w-[175px]  hover:bg-gray-700'>Continue</button>
+            <button className='bg-black text-white px-2 py-1.5 rounded-md text-sm md:text-lg w-[175px]  hover:bg-gray-700'>Continue</button>
             </div>
             <div className='flex items-center justify-center '><Link to="/addaddress">
-            <button className='bg-black text-white px-2 py-1.5 rounded-md text-lg w-[175px] hover:bg-gray-700 '>Add New Address</button>
+            <button className='bg-black text-white px-2 py-1.5 rounded-md text-sm md:text-lg w-[175px] hover:bg-gray-700 '>Add New Address</button>
             </Link></div>
               </div>
         </div>

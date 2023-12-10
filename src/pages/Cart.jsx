@@ -108,9 +108,9 @@ const Cart = () => {
           {
             cartData?.length === 0 ?
               <main className='flex items-center justify-center my-10'>
-                <div>
+                <div >
                   <h1 className='font-medium text-2xl my-4'>No Items In Cart</h1>
-                  <Link to="/" ><Button className=''>Shop Now</Button></Link>
+                  <Link to="/" ><button className=' ml-10 bg-black text-white px-3 py-1.5 rounded-md'>Shop Now</button></Link>
                 </div>
               </main>
               :
