@@ -10,6 +10,16 @@
   align-items: center;
   justify-content: center; 
 }
+.slick-next:before, .slick-prev:before{
+   opacity: 0 !important;
+   font-size: 1px !important;
+}
+.slick-next {
+   right:0 !important;
+}
+.slick-arrow .slick-next {
+   display: none !important;
+}
 .react-slideshow-container .nav:last-of-type {
   right:30px !important;
 }

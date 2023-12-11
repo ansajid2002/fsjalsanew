@@ -33,7 +33,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
   
       ],

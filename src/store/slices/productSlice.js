@@ -33,7 +33,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -72,7 +72,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -110,7 +110,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -148,7 +148,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -186,7 +186,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -224,7 +224,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -262,7 +262,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -300,7 +300,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -339,7 +339,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -381,7 +381,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -420,7 +420,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -460,7 +460,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -499,7 +499,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -538,7 +538,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -577,7 +577,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -616,7 +616,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -655,7 +655,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -696,7 +696,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -735,7 +735,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -773,7 +773,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -811,7 +811,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -849,7 +849,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -887,7 +887,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -925,7 +925,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -964,7 +964,7 @@ const initialState = {
         { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
       ],
       add_ons: [
-        { title: "unstitched blouse fabric", price: 999 },
+        { title: "unstitched   fabric", price: 999 },
         { title: "ready size stitching", price: 999 },
 
       ],
@@ -1006,7 +1006,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1045,7 +1045,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1083,7 +1083,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1121,7 +1121,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1159,7 +1159,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1197,7 +1197,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1239,7 +1239,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1278,7 +1278,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1316,7 +1316,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1354,7 +1354,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1392,7 +1392,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1430,7 +1430,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1468,7 +1468,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1506,7 +1506,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1547,7 +1547,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1586,7 +1586,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1625,7 +1625,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1664,7 +1664,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1703,7 +1703,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1744,7 +1744,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1783,7 +1783,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1823,7 +1823,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1863,7 +1863,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1903,7 +1903,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1943,7 +1943,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -1983,7 +1983,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -2026,7 +2026,7 @@ const initialState = {
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
   add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
+    { title: "unstitched   fabric", price: 999 },
     { title: "ready size stitching", price: 999 },
 
   ],
@@ -2064,11 +2064,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+ 
   category_id: 8,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2103,11 +2099,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+ 
   category_id: 8,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2142,11 +2134,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+ 
   category_id: 8,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2181,11 +2169,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+  
   category_id: 8,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2220,11 +2204,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
 
-  ],
   category_id: 8,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2260,11 +2240,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+  
   category_id: 9,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2299,11 +2275,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
 
-  ],
   category_id: 9,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2338,11 +2310,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+  
   category_id: 9,
   subcategory_id: 1001,
   vendor_id: 501,
@@ -2377,11 +2345,7 @@ const initialState = {
     { Occassion: ["Wedding", "Casual", "Reception", "Cocktail"] },
     { Look: ["Designer", "Traditional", "Fashion", "Contemporary"] }
   ],
-  add_ons: [
-    { title: "unstitched blouse fabric", price: 999 },
-    { title: "ready size stitching", price: 999 },
-
-  ],
+  
   category_id: 9,
   subcategory_id: 1001,
   vendor_id: 501,

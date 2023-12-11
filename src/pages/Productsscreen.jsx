@@ -133,15 +133,18 @@ const Productsscreen = () => {
   return (
     <div className="flex ">
       {windowWidth >= 664 && (
-        <div className="w-[22%]  hide-on-small-screens border pl-[2%]">
-          <h1 className=" font-bold text-2xl my-4 mt-2">
+        <div className="w-[22%]  border pl-[2%]">
+          <h1 className=" font-bold text-xl lg:text-2xl my-4 mt-2">
             {originalName}
           </h1>
           <Sidebar/>
         </div>
 
       )}
-      <div className="w-[95%] sm:w-[75%] bg-white my-10 mx-auto">
+      <div className="w-[95%] sm:w-[75%] bg-white my-5 md:my-10 mx-auto">
+      <h1 className="block sm:hidden font-bold text-xl my-4 mt-2">
+            {originalName}
+          </h1>
       <div className="grid 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2">
   {productsToShow.map((single, index) => {
     const url = `/${categoryName}/${single.product_id}`; // Construct the URL
