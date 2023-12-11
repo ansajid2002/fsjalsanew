@@ -167,7 +167,7 @@ const Header = () => {
                                 })
                             }
                         </div> :
-                        <div className='mx-2'>
+                        <div className='mx-2 mt-2'>
 
                             <Slider {...settings}>
                                 {
@@ -177,13 +177,13 @@ const Header = () => {
                                         return (
                                             <div key={index}>
                                                 <Link to={`/${category_name}`}>
-                                                <div className='flex items-center justify-center mx-1.5 sm:mx-4 my-2 sm:my-4'>
+                                                <div className='flex items-center justify-center mx-1 sm:mx-4 my-2 sm:my-4'>
                                                     <div className='' >
                                                         {/* <div className='sm:h-[375px] sm:w-[250px] lg:h-[360px] lg:w-[240px] xl:h-[450px] xl:w-[300px]  2xl:h-[525px] 2xl:w-[350px]'> */}
                                                         <div className=' aspect-[4/4] border rounded-full   '>
-                                                            <img src={category_image_url} alt="trendimg" className=' rounded-full object-cover w-full h-full ' />
+                                                            <img src={category_image_url} alt="trendimg" className=' hover:scale-105 duration-300 rounded-full object-cover w-full h-full ' />
                                                         </div>
-                                                        <h1 className="text-center text-[11px] sm:text-[13px] md:text-xl font-medium mt-0.5 md:mt-1">{category_name}</h1>
+                                                        <h1 className="text-center hover:text-gray-400 text-[10px] sm:text-[13px] md:text-xl font-medium mt-0.5 md:mt-1">{category_name}</h1>
                                                     </div>
                                                 </div>
                                                 </Link>

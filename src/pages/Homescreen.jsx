@@ -135,7 +135,7 @@ const Homescreen = () => {
                 return (
                     <div className='relative h-full cursor-pointer'>
                         <img className="w-full h-[250px] md:h-[550px] object-cover" src={img} alt="sa" />
-                            <div className="bg-[#00000068] w-full h-full absolute top-0"></div>
+                            <div className="bg-[#00000030] w-full h-full absolute top-0"></div>
                      
                           
                     
